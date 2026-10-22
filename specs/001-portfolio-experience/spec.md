@@ -4,7 +4,7 @@
 
 **Created**: 2026-10-22
 
-**Status**: Draft
+**Status**: Clarified
 
 **Input**: User description: "Define the first functional version of my portfolio2.0 website, with
 five connected stages: command-style entry, Chicago GIS wireframe of Willis Tower, scroll-driven
@@ -237,7 +237,8 @@ navigation, and with reduced motion enabled the descent becomes a non-animated t
 - **FR-001**: The first view on every supported device MUST show the author's name and links to
   resume, LinkedIn, GitHub, and contact information without scrolling, typing, or waiting for
   animation. Public contact information is limited to an email address and city/region
-  ("Chicago, IL"); a phone number or street address MUST NOT appear anywhere on the site.
+  ("Chicago, IL"); the author's phone number or home street address MUST NOT appear anywhere on
+  the site. Building and geographic addresses in the facts tables are not personal contact data.
 - **FR-002**: Persistent navigation MUST be available from every stage and MUST reach Identity,
   Leadership, Business, Technology, Career Planning, Wellness, and Contact in one action.
 - **FR-003**: Each portfolio section MUST be directly addressable by a shareable link that opens at
