@@ -121,11 +121,33 @@ presented as verified without a source that was actually checked.
 | `01_inspiration/Screenshot 2026-10-22 032055.png`, `032132.png` (programmatic Swiss, data as material, engineered editorial) | All, cutaway | in use (author reference) | Rule-based layout, monochrome precision, exploded technical drawing |
 | `01_inspiration/uo.jpg` (pixel numerals, circular drafting marks) | Entry | proposed | Monospace/pixel display type for the prompt |
 | Computational rhythm (neon triangles), blue network image | — | not used | Glow conflicts with Principle VI |
-| `01_inspiration/Xbox.0.mov` | — | not reviewed | — |
+| `01_inspiration/2.png` (SL24 brutalist data dossier: dark ruled grid, large index numerals, underscore labels, one orange block) | All, navigation | in use (author reference) | Ruled grid cells, large section index numbers, uppercase underscore labels for real identifiers only, a single orange accent |
+| `01_inspiration/4.png` (The Designers Republic / Autechre poster: rule-based diagonal pattern, dense metadata block) | Cutaway | in use (author reference) | Rule-generated diagonal hatching, used only as section-cut material hatching (earth, concrete, rock), where hatch patterns carry meaning in drafting |
+| `01_inspiration/ChatGPT Image Oct 16, 2026, 09_12_53 AM.jpg` (Weingart spread: vertical line rhythm varying in width, black/white/orange) | Tower, descent | in use (author reference) | Line density as signal: floor-line rhythm on the tower; line spacing that tightens with depth in the descent |
+| `01_inspiration/Screenshot 2026-10-16 122951.png`, `123046.png` (audio-visual wireframe work: objects in circular reticles, numeric readouts, red point markers) | Tower | in use (author reference) | Circular bearing ring around the tower showing true north and current view angle; numeric readouts of real values; point markers as annotation anchors |
+| `01_inspiration/Xbox.0.mov` (42 s) | — | not reviewed | No frame-extraction tool installed; needs the author's description |
 | Drafted cutaway (clarification Q3) | Descent | approved (clarification Q3) | Section drawing, labeled strata |
 
-`2.png`, `4.png`, `ChatGPT Image Oct 16, 2026, 09_12_53 AM.jpg`, and the two 2026-10-16
-screenshots were not reviewed in this phase.
+### Principles drawn from the references
+
+- **Visual**: dark ground with white linework; one accent, international orange, for focus,
+  interaction, and annotation anchors (it appears in `base_idea.png`, `2.png`, and the Weingart
+  spread); ruled grid cells; large section index numerals (01–07); monospace uppercase labels.
+- **Interaction**: the tower sits inside a circular bearing ring whose tick marks and readout show
+  the real view angle relative to true north; annotations anchor to orange point markers.
+- **Architecture**: section-cut hatching in the cutaway follows drafting convention by material
+  (soil, concrete, limestone), not as free decoration.
+- **Motion**: rotation responds directly to input with short easing (≤ 200 ms); the descent is
+  coupled to scroll, never timed; command responses appear immediately (no typewriter delay that
+  holds back information).
+
+### Reference elements not adopted (would conflict with the constitution)
+
+- Invented technical jargon and fake metadata ("DARK_NODE", "ENCRYPTED_LOG"): conflicts with
+  Principle V; underscore labels are used only for real identifiers (e.g. `233_S_WACKER`).
+- Decorative barcodes, code-as-texture overlays, and point-cloud particles: decoration without
+  information, excluded by Principle VI and FR-042.
+- Full-bleed generative patterns: kept only as meaningful material hatching.
 
 ## Sourced facts
 
@@ -218,7 +240,7 @@ Sources: [CTBUH](https://www.skyscrapercenter.com/building/willis-tower/169) ·
   Setback heights follow from the setback floors, so they are approximate too.
 - **Pedway**: no source checked shows Willis Tower connected to it. The cutaway shows the Pedway
   only as Loop context, labeled "no known connection to Willis Tower", and never as a passage
-  into the building. (Pending author decision; it can be removed instead.)
+  into the building. (Approved by the author, 2026-10-22.)
 - **Freight tunnels**: the cutaway shows the tunnel level at its 40 ft depth, labeled with its
   secondary source, and "location under this block not verified" (`tunnel-here`).
 

@@ -170,11 +170,11 @@ Every functional requirement maps to where it is built and how it is checked.
 ## Unresolved Issues
 
 None block task generation. Each is tracked so it is settled before the step that needs it.
+Resolved 2026-10-22 by the author: tower renderer stays Canvas 2D; the Pedway appears as labeled
+Loop context.
 
 | Issue | Needed by | Owner |
 |---|---|---|
-| Tower renderer: keep Canvas 2D or start with Three.js | Delivery step 3 | Author decision |
-| Pedway in the cutaway: labeled Loop context or removed | Delivery step 4 | Author decision |
 | Setback floors and pairs (50/66/90) rest on one secondary source; confirm from SOM, CTBUH, or CAC material | Delivery step 3 (shown as approximate until then) | Research task |
 | Not found in any source: individual antenna heights, caisson depth, freight tunnels under adjacent streets, Lower Wacker clearances | Shown as "pending verification" | Research task, optional |
 | Author content, resume PDF, headshot, profile URLs | Final release (v1 ships with marked placeholders) | Author, via content inventory |
