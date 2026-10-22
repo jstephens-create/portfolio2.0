@@ -1,48 +1,74 @@
 # Jordan Stephens Portfolio
 
-A personal portfolio website showcasing Jordan Stephens's projects, technical interests, and creative work.
+My i.c.stars C60 digital portfolio: Leadership, Business, Technology, Career Planning, and
+Wellness, presented as a descent from a Chicago skyline into the ground beneath it.
 
-## About
+## The experience
 
-This portfolio demonstrates web development, creative problem-solving, visual experimentation, photography, and project organization.
+1. **Entry**: a command prompt (`begin`, `leadership`, `resume`, `help`, …) beside my name and
+   professional links.
+2. **Willis Tower**: a rotatable wireframe of the bundled-tube structure, drawn only from a facts
+   table where every figure is labeled verified, approximate, or interpretation, with its source.
+3. **Underground descent**: scrolling moves the view below the street into a drafted cutaway:
+   Lower Wacker, the Loop Pedway (shown as context; no known connection to the tower), the freight
+   tunnel level, the basement, caissons, and limestone bedrock.
+4. **Portfolio sections**: each cutaway level opens one section of the portfolio.
+5. **Direct access**: name, resume, LinkedIn, GitHub, and contact are in the first view, and the
+   navigation reaches every section without the immersive stages.
 
-## Features
+Everything works with JavaScript off and with reduced motion; the stages are enhancements.
 
-- About section
-- Selected projects
-- Contact section
-- Responsive navigation
+## Run it locally
 
-- Photography collections with keyboard-accessible galleries
-- Multi-page website structure
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript
-- Git
-- GitHub Pages
-
-## Project Structure
-
-```text
-
+```bash
+python -m http.server 8000
 ```
 
-## Live Site
+Open <http://127.0.0.1:8000/>. Opening `index.html` from disk does not work, because browsers
+block script modules on `file://`.
 
-## Future Improvements
+## Checks
 
+```bash
+node --test "tests/*.test.js"
+```
+
+- `?audit` in the URL shows the content coverage report; `?audit=release` is the final gate.
+- Manual scenarios, performance budgets, and the link check are in
+  [specs/001-portfolio-experience/quickstart.md](specs/001-portfolio-experience/quickstart.md).
+
+## Technologies
+
+HTML, CSS, and JavaScript modules, with no framework, build step, or runtime dependency. Canvas
+2D for the tower, inline SVG for the cutaway. Tests use Node's built-in test runner. Hosted on
+GitHub Pages.
+
+## Project structure
+
+```text
+index.html            All content, facts tables, and the cutaway drawing
+css/site.css          Visual system, layout, reduced-motion and print styles
+js/main.js            Loads each stage in isolation
+js/command.js         Entry prompt
+js/gis/               Tower geometry (from the facts table) and Canvas renderer
+js/descent.js         Scroll-driven descent
+js/audit.js           Content audit (?audit)
+assets/               Resume, images, static tower drawing
+tests/                Unit tests
+specs/                Spec Kit specification, plan, research, and tasks
+01_inspiration/, Architectual-gis-wireframe/   Design references (not published as site assets)
+```
+
+## Live site
+
+Not published yet.
+
+## Future improvements
+
+- Photography collections with keyboard-accessible galleries
 - Additional project case studies
-- Broader media codec support
-- Further accessibility refinements
+- Broader media codec support, if video evidence is added
 
 ## Author
 
 Jordan Stephens
-
-
-
-
-

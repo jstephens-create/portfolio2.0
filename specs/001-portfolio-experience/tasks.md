@@ -185,8 +185,8 @@ pushes, installs, or deploys without approval at that time.
 
 **Purpose**: Documentation, full validation, and release readiness.
 
-- [ ] T042 [P] Rewrite `readme.md` to describe this experience, its five stages, how to run it locally, and the [README Reconciliation](spec.md#readme-reconciliation) decisions, keeping the deferred items (photography galleries, case studies, media codec support) listed as future work (FR-044). **Done when**: no README statement contradicts the spec.
-- [ ] T043 Run `node --test "tests/*.test.js"` (Node 26 needs the glob form). **Done when**: all tests pass.
+- [X] T042 [P] Rewrite `readme.md` to describe this experience, its five stages, how to run it locally, and the [README Reconciliation](spec.md#readme-reconciliation) decisions, keeping the deferred items (photography galleries, case studies, media codec support) listed as future work (FR-044). **Done when**: no README statement contradicts the spec.
+- [X] T043 Run `node --test "tests/*.test.js"` (Node 26 needs the glob form). **Done when**: all tests pass.
 - [ ] T044 Run quickstart scenarios 1–14, confirm nothing flashes more than three times per second (FR-035), review that all content is first person and specific (Principle I), confirm there is no dead or unused code in `js/` and `css/` (Principle VIII), and record pass/fail with date and device in `specs/001-portfolio-experience/checklists/release.md`. **Done when**: all 14 pass, or failures are logged as new tasks.
 - [ ] T045 Run Lighthouse (mobile) and measure every [performance budget](plan.md#performance-budgets) in the Network panel; record the numbers in `specs/001-portfolio-experience/checklists/release.md`. **Done when**: Accessibility 100, Performance ≥ 90, LCP ≤ 2.5 s, CLS ≤ 0.1, TBT ≤ 200 ms, and every budget is met.
 - [ ] T046 Run the link check from [quickstart.md](quickstart.md#automated-checks) and check LinkedIn by hand; record results in `specs/001-portfolio-experience/checklists/release.md`. **Done when**: every external link returns 200 without landing on a sign-in page (SC-008).
