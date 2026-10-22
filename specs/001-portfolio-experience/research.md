@@ -97,7 +97,7 @@ presented as verified without a source that was actually checked.
 
 ## Decision: Testing
 
-- **Decision**: Node's built-in test runner (`node --test`) for pure modules; Lighthouse
+- **Decision**: Node's built-in test runner (`node --test "tests/*.test.js"`) for pure modules; Lighthouse
   (built into Chrome) for accessibility and performance; curl for links; manual scenarios in
   [quickstart.md](quickstart.md).
 - **Rationale**: All tools are already installed (Node 26, Python 3.14, curl). Lighthouse's

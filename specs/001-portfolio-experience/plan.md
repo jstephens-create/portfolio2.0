@@ -25,7 +25,7 @@ JavaScript ES2022 modules. No transpilation.
 
 **Storage**: None. Content lives in `index.html`; the resume and images are static files.
 
-**Testing**: `node --test tests/` for pure logic modules (command parsing, scroll progress, tower
+**Testing**: `node --test "tests/*.test.js"` for pure logic modules (command parsing, scroll progress, tower
 geometry, content audit); `?audit` in-browser coverage report; Lighthouse and manual scenarios in
 [quickstart.md](quickstart.md).
 

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 720" width="320" height="720" role="img" aria-labelledby="t d">
+  <title id="t">Willis Tower elevation and plan</title>
+  <desc id="d">Elevation from the south and a plan of the nine 75-foot tubes. All nine rise to floor 50; tubes end at floors 50, 66, and 90; two reach the roof at floor 108, 1,451 feet. Setback floors are approximate (secondary source). Antennas are not drawn because their individual heights are unverified.</desc>
+  <!-- Scale: 600 px = 108 floors (5.556 px per floor); one tube = 31 px. Base at y = 680. -->
+  <style>
+    * { fill: none; stroke: #d9d6cf; stroke-width: 1; }
+    text { fill: #d9d6cf; stroke: none; font: 10px ui-monospace, Consolas, monospace; }
+    .title { font-size: 12px; font-weight: 600; }
+    .floors { stroke-width: 0.5; opacity: 0.35; }
+    .hidden { stroke-dasharray: 3 3; opacity: 0.6; }
+  </style>
+
+  <text class="title" x="40" y="30">WILLIS TOWER</text>
+
+  <path class="floors" d="M40 646.67H133M40 613.33H133M40 580H133M40 546.67H133M40 513.33H133M40 480H133M40 446.67H133M40 413.33H133M40 380H133M40 346.67H133M40 280H133M40 246.67H133M40 213.33H133M40 146.67H102M40 113.33H102"/>
+
+  <!-- Silhouette: west and center columns to floor 108, east column to floor 90. -->
+  <path d="M40 680V80H102V180H133V680Z"/>
+  <!-- Tier lines where tubes behind or in front end. -->
+  <path class="hidden" d="M40 402.22H71M40 313.33H71M102 402.22H133M102 313.33H133M71 180H102"/>
+  <path d="M71 80V680M102 180V680"/>
+
+  <path d="M135 80H143M135 180H143M135 313.33H143M135 402.22H143"/>
+  <text x="145" y="84">108 FL · ROOF</text>
+  <text x="145" y="96">1,451 ft · verified</text>
+  <text x="145" y="184">90 FL · approx.</text>
+  <text x="145" y="317">66 FL · approx.</text>
+  <text x="145" y="406">50 FL · approx.</text>
+  <text x="145" y="628">setback floors:</text>
+  <text x="145" y="640">secondary source</text>
+
+  <text x="40" y="700">ELEVATION FROM SOUTH</text>
+  <text x="40" y="712">base 225 ft (3 × 75 ft)</text>
+
+  <text x="210" y="512">PLAN · TOP FLOOR</text>
+  <text x="300" y="530">N ↑</text>
+  <path d="M210 520H294V604H210ZM238 520V604M266 520V604M210 548H294M210 576H294"/>
+  <text x="224" y="538" text-anchor="middle">50</text>
+  <text x="252" y="538" text-anchor="middle">90</text>
+  <text x="280" y="538" text-anchor="middle">66</text>
+  <text x="224" y="566" text-anchor="middle">108</text>
+  <text x="252" y="566" text-anchor="middle">108</text>
+  <text x="280" y="566" text-anchor="middle">90</text>
+  <text x="224" y="594" text-anchor="middle">66</text>
+  <text x="252" y="594" text-anchor="middle">90</text>
+  <text x="280" y="594" text-anchor="middle">50</text>
+</svg>

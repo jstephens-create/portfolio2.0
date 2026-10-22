@@ -17,7 +17,7 @@ browsers block script modules on `file://`.
 ## Automated checks
 
 ```bash
-node --test tests/
+node --test "tests/*.test.js"
 ```
 
 Expected: all tests pass. They cover command parsing ([contracts/commands.md](contracts/commands.md)),

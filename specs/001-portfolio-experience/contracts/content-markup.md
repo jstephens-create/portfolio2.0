@@ -11,6 +11,7 @@ published.
 | Fragment | Element | Heading |
 |---|---|---|
 | `#main` | `<main>` | — (skip-link target) |
+| `#profile` | profile block in `<header>` | `h1` name (target of the `resume` suggestion) |
 | `#entry` | `<section>` | visually hidden `h2` "Entry" |
 | `#gis` | `<section>` | `h2` Willis Tower |
 | `#descent` | `<section>` | `h2` Beneath the Loop |
@@ -56,7 +57,7 @@ A `pending` profile entry is never an `<a>` (FR-005).
 </tr>
 ```
 
-Columns: label, value with unit, classification in words, source link. `data-class` ∈
+Columns: label, value with unit, classification in words, source link. Rows used in drawings also carry `data-value` with the number in feet or floors (e.g. `data-value="1451"`); pending rows carry none. `data-class` ∈
 `verified`, `approximate`, `interpretation`, `pending`. The GIS stage and cutaway read values from
 this table; they never hard-code figures.
 
