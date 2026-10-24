@@ -30,6 +30,7 @@ function focusFragment() {
   const target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
   if (!target) return;
   const heading = target.matches('h1, h2, h3, h4') ? target : target.querySelector('h1, h2, h3, h4') ?? target;
+  if (!(heading instanceof HTMLElement)) return;
   heading.setAttribute('tabindex', '-1');
   heading.focus();
 }
@@ -40,4 +41,4 @@ focusFragment();
 loadStage('command', () => import('./command.js'), $('#entry'));
 whenNear($('#gis'), () => loadStage('gis', () => import('./gis/render.js'), $('#gis')));
 whenNear($('#descent'), () => loadStage('descent', () => import('./descent.js'), $('#descent')));
-if (new URLSearchParams(location.search).has('audit')) loadStage('audit', () => import('./audit.js'));
+if (new URLSearchParams(location.search).has('audit')) loadStage('audit', () => import('./audit.js'), null);

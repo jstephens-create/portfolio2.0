@@ -145,6 +145,14 @@ button:hover { border-color: var(--accent); color: var(--accent); }
 [data-item] { border-top: 1px solid var(--rule); padding-top: 0.75rem; }
 .pending { margin: 0; padding: 0.5rem 0.75rem; border: 1px dashed var(--muted); color: var(--muted); font-size: 0.875rem; }
 .pending::before { content: "PENDING"; display: block; font: 600 0.6875rem var(--mono); letter-spacing: 0.08em; color: var(--accent); }
+[data-item][data-status="draft"] > :is(h3, h4)::after { content: " · DRAFT"; font: 600 0.6875rem var(--mono); letter-spacing: 0.08em; color: var(--accent); }
+/* Item bodies read as YAML: key: on one line, indented value below. */
+.yaml { margin: 0; font: 0.8125rem/1.6 var(--mono); }
+.yaml dt { color: var(--accent); }
+.yaml dt::after { content: ":"; }
+.yaml dd { margin: 0 0 0.5rem 2ch; }
+.yaml ul { list-style: none; margin: 0; padding: 0; }
+.yaml li::before { content: "- "; color: var(--muted); }
 [data-section] [data-section] { margin-top: 2rem; }
 @media (min-width: 56rem) {
   main > [data-section] { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-flow: dense; column-gap: 1.5rem; }
