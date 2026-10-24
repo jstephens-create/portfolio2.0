@@ -18,7 +18,10 @@ Wellness, presented as a descent from a Chicago skyline into the ground beneath 
 
 Everything works with JavaScript off and with reduced motion; the stages are enhancements.
 
-## Run it locally
+## Local development
+
+Optional, for previewing changes before they are merged. Any static file server works; Python's
+built-in server is one option and is not used in production:
 
 ```bash
 python -m http.server 8000
@@ -61,7 +64,13 @@ specs/                Spec Kit specification, plan, research, and tasks
 
 ## Live site
 
-Not published yet.
+<https://jstephens-create.github.io/portfolio2.0/>
+
+## Deployment
+
+GitHub Pages serves the files in this repository as they are, from the root (`/`) of the `main`
+branch. Merging into `main` publishes the site, usually within a minute or two. There is no build
+step, server, or runtime dependency.
 
 ## Future improvements
 
