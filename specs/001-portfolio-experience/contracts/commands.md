@@ -22,13 +22,12 @@ The command prompt (Story 3, FR-013 to FR-018) is the site's only text interface
 | `business` | — | `#business` | "Opening Business." |
 | `technology` | `tech` | `#technology` | "Opening Technology." |
 | `career` | `career planning` | `#career` | "Opening Career Planning." |
-| `wellness` | — | `#wellness` | "Opening Wellness." |
 | `resume` | `cv` | Opens resume PDF in new tab | "Opening resume in a new tab." |
 | `contact` | `email` | `#contact` | "Opening Contact." |
 | `help` | `?`, `ls` | Stays | Lists every command name |
 
 Unknown or empty input → "Unknown command. Try: begin, identity, leadership, business,
-technology, career, wellness, resume, contact."
+technology, career, resume, contact."
 
 ## Suggestions
 

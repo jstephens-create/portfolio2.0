@@ -20,8 +20,6 @@ published.
 | `#business` | `<section data-section data-minimum="4">` | `h2` Business |
 | `#technology` | `<section data-section data-minimum="5">` | `h2` Technology |
 | `#career` | `<section data-section data-minimum="4">` | `h2` Career Planning |
-| `#wellness` | `<section data-section data-minimum="0">` | `h2` Wellness |
-| `#wellness-financial`, `#wellness-emotional`, `#wellness-mental`, `#wellness-physical` | nested `<section data-section data-minimum="1">` | `h3` |
 | `#contact` | `<section data-section data-minimum="0">` | `h2` Contact |
 
 ## Profile links
@@ -68,8 +66,9 @@ this table; they never hard-code figures.
 ```
 
 Exactly one `data-level` per top-level section: `identity`, `leadership`, `business`,
-`technology`, `career`, `wellness`, `contact` (seven levels). Wellness subareas are reached from
-the Wellness section, not as separate levels.
+`technology`, `career`, `contact` (six levels, in that order from street level to bedrock).
+Wellness was removed from the public portfolio at the author's direction (2026-11-01); see the
+pending constitution amendment.
 
 ## Requirement keys
 
@@ -81,10 +80,6 @@ Keys follow `{section}.{option}`. Bonus items append `.bonus`.
 | business | `client-project`, `consulting-company`, `rfp-proposal`, `engagement-days`, `mentor-feedback`, `external-guests`, `bonus` |
 | technology | `web-app`, `geek-week`, `coding-clicked`, `debugging-growth`, `github-collaboration`, `cloud-tools`, `business-tools`, `typing-speed`, `five-hour-minimums`, `bonus` |
 | career | `career-plans`, `career-director`, `employer-workshops`, `resume-prep`, `professional-brand`, `target-roles`, `bonus` |
-| wellness-financial | `spending-reflection`, `financial-goals`, `workshop-notes`, `credit-score`, `bonus` |
-| wellness-emotional | `journal-entry`, `self-talk`, `mood-tracker`, `affirmations`, `bonus` |
-| wellness-mental | `coping-strategies`, `stress-reflection`, `focus-journal`, `toolbox`, `bonus` |
-| wellness-physical | `habit-tracker`, `appointment-notes`, `physical-routine`, `local-resources`, `bonus` |
 | identity | `introduction`, `headshot`, `mission-statement` |
 
 Bonus items never count toward a minimum.

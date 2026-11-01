@@ -39,6 +39,7 @@ addEventListener('hashchange', focusFragment);
 focusFragment();
 
 loadStage('command', () => import('./command.js'), $('#entry'));
+loadStage('nav', () => import('./nav.js'), $('.site-nav'));
 whenNear($('#gis'), () => loadStage('gis', () => import('./gis/render.js'), $('#gis')));
 whenNear($('#descent'), () => loadStage('descent', () => import('./descent.js'), $('#descent')));
 if (new URLSearchParams(location.search).has('audit')) loadStage('audit', () => import('./audit.js'), null);

@@ -29,9 +29,9 @@ never as a link (FR-005). Phone number and street address are not fields and MUS
 
 | Field | Rule |
 |---|---|
-| id | One of `identity`, `leadership`, `business`, `technology`, `career`, `wellness`, `wellness-financial`, `wellness-emotional`, `wellness-mental`, `wellness-physical`, `contact` |
-| heading | Visible heading; `h2` for sections, `h3` for Wellness subareas |
-| minimum | Leadership 5, Business 4, Technology 5, Career 4, each Wellness subarea 1; others 0 |
+| id | One of `identity`, `leadership`, `business`, `technology`, `career`, `contact` |
+| heading | Visible `h2` |
+| minimum | Leadership 5, Business 4, Technology 5, Career 4; others 0 |
 | items | Ordered Portfolio Items |
 
 The section `id` doubles as its shareable link fragment (FR-003), its command name, and its

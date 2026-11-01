@@ -7,7 +7,6 @@ const COMMANDS = [
   { name: 'business', aliases: [], target: '#business', message: 'Opening Business.' },
   { name: 'technology', aliases: ['tech'], target: '#technology', message: 'Opening Technology.' },
   { name: 'career', aliases: ['career planning'], target: '#career', message: 'Opening Career Planning.' },
-  { name: 'wellness', aliases: [], target: '#wellness', message: 'Opening Wellness.' },
   { name: 'resume', aliases: ['cv'], action: 'resume', message: 'Opening resume in a new tab.' },
   { name: 'contact', aliases: ['email'], target: '#contact', message: 'Opening Contact.' },
   { name: 'help', aliases: ['?', 'ls'], action: 'help' },

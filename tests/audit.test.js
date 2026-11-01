@@ -11,14 +11,9 @@ function baseModel(status = 'pending') {
     sections: [
       { id: 'identity', minimum: 0, items: items('identity', ['introduction', 'headshot', 'mission-statement'], status) },
       { id: 'leadership', minimum: 5, items: items('leadership', ['team-week', 'gifts-project', 'community-role', 'tea-host', 'dream-speech'], status) },
-      { id: 'business', minimum: 4, items: items('business', ['client-project', 'consulting-company', 'rfp-proposal', 'engagement-days'], status) },
+      { id: 'business', minimum: 4, items: items('business', ['client-project', 'consulting-company', 'engagement-days', 'mentor-feedback'], status) },
       { id: 'technology', minimum: 5, items: items('technology', ['web-app', 'geek-week', 'coding-clicked', 'debugging-growth', 'github-collaboration'], status) },
       { id: 'career', minimum: 4, items: items('career', ['career-plans', 'career-director', 'employer-workshops', 'target-roles'], status) },
-      { id: 'wellness', minimum: 0, items: [] },
-      { id: 'wellness-financial', minimum: 1, items: items('wellness-financial', ['financial-goals'], status) },
-      { id: 'wellness-emotional', minimum: 1, items: items('wellness-emotional', ['affirmations'], status) },
-      { id: 'wellness-mental', minimum: 1, items: items('wellness-mental', ['coping-strategies'], status) },
-      { id: 'wellness-physical', minimum: 1, items: items('wellness-physical', ['habit-tracker'], status) },
       { id: 'contact', minimum: 0, items: [] },
     ],
     profile: [{ key: 'location', status: 'supplied' }, { key: 'github', status: 'supplied' }],
@@ -28,8 +23,7 @@ function baseModel(status = 'pending') {
       { key: 'antenna-each', cls: 'pending', value: '', source: null },
     ],
     levels: [{ href: '#identity' }, { href: '#contact' }],
-    sectionIds: ['entry', 'gis', 'descent', 'identity', 'leadership', 'business', 'technology', 'career', 'wellness',
-      'wellness-financial', 'wellness-emotional', 'wellness-mental', 'wellness-physical', 'contact'],
+    sectionIds: ['entry', 'gis', 'descent', 'identity', 'leadership', 'business', 'technology', 'career', 'contact'],
     text: '233 South Wacker Drive, Chicago 60606 · 442.1 m / 1,451 ft · 41.87874° N, 87.63596° W · 1899–1914',
   };
 }

@@ -1,7 +1,9 @@
 # Jordan Stephens Portfolio
 
-My i.c.stars C60 digital portfolio: Leadership, Business, Technology, Career Planning, and
-Wellness, presented as a descent from a Chicago skyline into the ground beneath it.
+**Live site:** <https://jstephens-create.github.io/portfolio2.0/>
+
+My i.c.stars C60 digital portfolio: Identity, Leadership, Business, Technology, and Career
+Planning, presented as a descent from a Chicago skyline into the ground beneath it.
 
 ## The experience
 
@@ -55,6 +57,7 @@ js/main.js            Loads each stage in isolation
 js/command.js         Entry prompt
 js/gis/               Tower geometry (from the facts table) and Canvas renderer
 js/descent.js         Scroll-driven descent
+js/nav.js             Section ticker and scroll spy
 js/audit.js           Content audit (?audit)
 assets/               Resume, images, static tower drawing
 tests/                Unit tests

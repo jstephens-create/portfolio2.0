@@ -53,13 +53,23 @@ export function buildTower(facts) {
   return { tubes, segments, floorSegments, ground, base, height: Math.max(...tubes.map((t) => t.top)), perFloor };
 }
 
-// Orthographic drafting view: rotate about the vertical axis, then tilt toward the viewer.
-export function project([x, y, z], { azimuth, tilt, zoom, width, height, center, span }) {
+// Drafting view: rotate about the vertical axis, tilt toward the viewer, optional mild perspective.
+export function project([x, y, z], { azimuth, tilt, zoom, width, height, center, span, camera = 0 }) {
   const a = azimuth * RAD;
   const t = tilt * RAD;
   const x1 = x * Math.cos(a) - z * Math.sin(a);
   const z1 = x * Math.sin(a) + z * Math.cos(a);
   const y0 = y - center;
-  const s = (zoom * Math.min(width, height)) / span;
-  return [width / 2 + x1 * s, height / 2 - (y0 * Math.cos(t) - z1 * Math.sin(t)) * s, y0 * Math.sin(t) + z1 * Math.cos(t)];
+  const depth = y0 * Math.sin(t) + z1 * Math.cos(t); // larger is nearer the viewer
+  // camera: viewer distance in model spans; 0 keeps the orthographic drafting view.
+  const k = camera > 0 ? (camera * span) / (camera * span - depth) : 1;
+  const s = ((zoom * Math.min(width, height)) / span) * k;
+  return [width / 2 + x1 * s, height / 2 - (y0 * Math.cos(t) - z1 * Math.sin(t)) * s, depth];
+}
+
+// Automatic rotation from elapsed time, so speed is the same at any frame rate.
+// A long gap (background tab, dropped frames) is capped so the model never lurches.
+export function stepAzimuth(azimuth, elapsedMs, degreesPerSecond, maxStepMs = 100) {
+  const next = azimuth + (degreesPerSecond * Math.min(Math.max(elapsedMs, 0), maxStepMs)) / 1000;
+  return ((next % 360) + 360) % 360;
 }

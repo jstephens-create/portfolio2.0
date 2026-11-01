@@ -48,7 +48,7 @@ Use Chrome or Edge DevTools. Each maps to a spec story and the constitution's re
 | # | Scenario | Steps | Expected |
 |---|---|---|---|
 | 1 | First view (Story 1) | Device toolbar at 375×667 and 1440×900; reload | Name, email, "Chicago, IL", resume view/download, LinkedIn, GitHub visible without scrolling |
-| 2 | Deep link | Open `/#wellness-mental` | Page opens at Mental Wellness; entry and descent do not replay |
+| 2 | Deep link | Open `/#career` | Page opens at Career Planning; entry and descent do not replay |
 | 3 | No scripts | DevTools › Settings › Debugger › Disable JavaScript; reload | All sections, facts table, static tower drawing, cutaway links usable |
 | 4 | Reduced motion | Rendering panel › Emulate `prefers-reduced-motion: reduce` | No scroll-linked motion; descent shows as stacked sections |
 | 5 | Commands (Story 3) | Type each command in [contracts/commands.md](contracts/commands.md), then `xyz` and empty | Correct destination; help for unknown and empty; response announced |

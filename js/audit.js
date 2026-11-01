@@ -7,10 +7,6 @@ const KEYS = {
   business: ['client-project', 'consulting-company', 'rfp-proposal', 'engagement-days', 'mentor-feedback', 'external-guests', 'bonus'],
   technology: ['web-app', 'geek-week', 'coding-clicked', 'debugging-growth', 'github-collaboration', 'cloud-tools', 'business-tools', 'typing-speed', 'five-hour-minimums', 'bonus'],
   career: ['career-plans', 'career-director', 'employer-workshops', 'resume-prep', 'professional-brand', 'target-roles', 'bonus'],
-  'wellness-financial': ['spending-reflection', 'financial-goals', 'workshop-notes', 'credit-score', 'bonus'],
-  'wellness-emotional': ['journal-entry', 'self-talk', 'mood-tracker', 'affirmations', 'bonus'],
-  'wellness-mental': ['coping-strategies', 'stress-reflection', 'focus-journal', 'toolbox', 'bonus'],
-  'wellness-physical': ['habit-tracker', 'appointment-notes', 'physical-routine', 'local-resources', 'bonus'],
 };
 const KNOWN = new Set(Object.entries(KEYS).flatMap(([section, options]) => options.map((o) => `${section}.${o}`)));
 const PHONE = /\(?\b\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}\b/;

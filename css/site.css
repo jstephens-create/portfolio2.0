@@ -46,14 +46,30 @@ h4 { font-size: 1rem; }
 }
 [data-profile][data-status="pending"] { color: var(--muted); }
 
-/* Persistent navigation: scrolls sideways inside itself on narrow screens, never the page */
-.site-nav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--rule); }
+/* Persistent navigation: scrolls sideways inside itself on narrow screens, never the page.
+   With scripts and motion allowed, js/nav.js turns it into a slow right-to-left ticker. */
+.site-nav { position: sticky; top: 0; z-index: 10; display: flex; background: var(--bg); border-bottom: 1px solid var(--rule); }
 .site-nav ol {
-  display: flex; align-items: center; gap: 1.25rem; height: var(--nav-h);
+  flex: 1; min-width: 0; display: flex; align-items: stretch; height: var(--nav-h);
   margin: 0; padding: 0 var(--gutter); list-style: none; overflow-x: auto; white-space: nowrap;
   font: 0.8125rem var(--mono); text-transform: uppercase; letter-spacing: 0.06em;
+  overscroll-behavior-x: contain;
 }
-.site-nav a { text-decoration: none; display: inline-block; padding: 0.25rem 0; }
+.site-nav li { display: flex; align-items: center; }
+/* Drafting tick between labels; part of each item so every copy measures the same */
+.site-nav li::after { content: ""; width: 1.25rem; height: 1px; margin: 0 1rem; background: var(--rule); }
+.site-nav a {
+  display: flex; align-items: center; gap: 0.5ch; min-height: var(--nav-h); padding: 0 0.25rem;
+  text-decoration: none; box-shadow: inset 0 -2px 0 transparent;
+}
+.site-nav a[aria-current] { color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent); }
+.site-nav.is-ticking ol { padding: 0; scrollbar-width: none; }
+.site-nav.is-ticking ol::-webkit-scrollbar { display: none; }
+.site-nav.is-ticking:not(:focus-within) ol {
+  mask-image: linear-gradient(to right, transparent, #000 2rem, #000 calc(100% - 2rem), transparent);
+}
+.ticker-toggle { flex: none; min-width: var(--nav-h); border-width: 0 0 0 1px; font-size: 0.875rem; }
+.ticker-toggle[aria-pressed="true"] { color: var(--accent); }
 .index { color: var(--accent); font-family: var(--mono); font-weight: 400; }
 
 main > section { padding: 3rem var(--gutter); border-bottom: 1px solid var(--rule); }
@@ -87,19 +103,35 @@ button:hover { border-color: var(--accent); color: var(--accent); }
 .lede { max-width: 40rem; color: var(--muted); font-size: 0.9375rem; }
 .tower-stage { position: relative; max-width: 44rem; margin: 1.5rem auto; }
 .tower-fallback { display: block; margin-inline: auto; width: min(100%, 20rem); height: auto; }
-.is-live .tower-stage { aspect-ratio: 4 / 5; max-height: 85vh; border: 1px solid var(--rule); }
 .is-live .tower-fallback { display: none; }
+/* The model gets the whole drawing area; controls and notes sit in a toolbar below it. */
+.tower-viewport { position: relative; aspect-ratio: 4 / 5; max-height: 78vh; margin-inline: auto; border: 1px solid var(--rule); }
 .tower-canvas { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--fg); touch-action: pan-y; cursor: grab; }
 .tower-canvas:active { cursor: grabbing; }
-.tower-labels { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; pointer-events: none; overflow: hidden; }
+.tower-labels { position: absolute; left: 0; top: 0; margin: 0; padding: 0; list-style: none; pointer-events: none; }
 .tower-labels li {
-  position: absolute; left: 0; top: 0; max-width: 13rem; padding: 1px 4px;
-  font: 0.6875rem/1.25 var(--mono); background: color-mix(in srgb, var(--bg) 75%, transparent);
+  position: absolute; left: 0; top: 0; width: max-content; max-width: 10.5rem; padding: 2px 5px;
+  font: 0.6875rem/1.3 var(--mono); background: color-mix(in srgb, var(--bg) 85%, transparent); border-left: 1px solid var(--accent);
 }
-.tower-note { position: absolute; left: 0.5rem; top: 0.5rem; margin: 0; font: 0.6875rem var(--mono); color: var(--muted); max-width: 60%; }
-.tower-controls { position: absolute; right: 0.5rem; bottom: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.25rem; align-items: center; justify-content: flex-end; }
-.tower-controls button { background: var(--bg); }
-.tower-readout { font: 0.75rem var(--mono); color: var(--accent); margin-right: 0.5rem; }
+.tower-labels li::before, .is-compact .tower-labels li::before { content: counter(list-item, decimal-leading-zero) " "; color: var(--accent); }
+/* Phones: a numbered legend under the model instead of callouts over it */
+.is-compact .tower-labels { position: static; display: grid; gap: 0.25rem; margin-top: 0.75rem; }
+.is-compact .tower-labels li { position: static; width: auto; max-width: none; padding: 0 0 0 0.5rem; background: none; }
+.tower-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin-top: 0.5rem; }
+.tower-readout { font: 0.75rem var(--mono); color: var(--accent); letter-spacing: 0.04em; }
+.tower-note { flex: 1 1 14rem; margin: 0; font: 0.6875rem var(--mono); color: var(--muted); }
+.tower-controls { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-left: auto; }
+.tower-toggle[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+/* Tablet and desktop: a square drawing area leaves side gutters for the callouts.
+   (max-height transfers through aspect-ratio, so a tall ratio would shrink the width.) */
+@media (min-width: 48rem) {
+  .tower-viewport { aspect-ratio: 1 / 1; max-height: 85vh; }
+}
+@media (max-width: 30rem) {
+  .tower-viewport { max-height: 70vh; }
+  .tower-controls { display: grid; grid-template-columns: repeat(6, 1fr); width: 100%; margin-left: 0; }
+  .tower-controls button { padding: 0; }
+}
 
 /* Facts tables: text equivalent of the drawings (FR-034) */
 .facts { width: 100%; max-width: 64rem; margin-top: 2rem; border-collapse: collapse; font-size: 0.8125rem; overflow-wrap: anywhere; }
@@ -130,14 +162,33 @@ button:hover { border-color: var(--accent); color: var(--accent); }
 .cut-void { fill: var(--bg); stroke: currentColor; stroke-width: 1; }
 .cut-label { font-size: 9px; font-weight: 600; letter-spacing: 0.04em; }
 .cut-note { font-size: 9px; fill: var(--muted) !important; }
-.level rect { fill: transparent; stroke: none; }
-.level path { fill: none; stroke: var(--muted); stroke-width: 0.75; }
-.level circle { fill: var(--accent); }
-.level-title { font-size: 13px; font-weight: 600; }
-.level-layer { font-size: 10px; fill: var(--muted) !important; }
-.level:hover .level-title { fill: var(--accent); }
+/* Levels: each one is a link. Hover, focus, the nearest level while descending, and the
+   current section (aria-current, from js/nav.js) all light the same parts. */
+.level { cursor: pointer; }
+.level rect { fill: transparent; stroke: var(--rule); stroke-width: 1; }
+.level path { fill: none; stroke: var(--muted); stroke-width: 0.75; stroke-dasharray: 2 3; stroke-opacity: 0.6; }
+.level circle { fill: var(--accent); stroke: var(--accent); stroke-opacity: 0.25; stroke-width: 0; }
+.level-title { font-size: 14px; font-weight: 600; }
+.level-layer { font-size: 11px; fill: var(--muted) !important; }
+.level-depth { font-size: 10px; fill: var(--muted) !important; letter-spacing: 0.02em; }
+.level:is(:hover, :focus-visible, .is-near, [aria-current]) rect { stroke: var(--accent); fill: color-mix(in srgb, var(--accent) 9%, transparent); }
+.level:is(:hover, :focus-visible, .is-near, [aria-current]) path { stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: none; stroke-opacity: 1; }
+.level:is(:hover, :focus-visible, .is-near, [aria-current]) circle { stroke-width: 8; }
+.level:is(:hover, :focus-visible, .is-near, [aria-current]) .level-title { fill: var(--accent); }
 .level:focus { outline: none; }
-.level:focus-visible rect { stroke: var(--accent); stroke-width: 2; }
+.level:focus-visible rect { stroke-width: 2.5; }
+.depth-readout { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .level rect, .level path, .level circle, .level-title { transition: fill 0.25s, stroke 0.25s, stroke-width 0.25s; }
+  /* A slow signal along the active connector: from label to coordinate point */
+  .level:is(.is-near, [aria-current]) path { stroke-dasharray: 6 4; animation: signal 1.4s linear infinite; }
+  .js .depth-readout {
+    display: block; position: absolute; left: var(--gutter); top: 0.5rem; z-index: 1; margin: 0;
+    padding: 0.2rem 0.5rem; font: 0.6875rem var(--mono); letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--accent); background: var(--bg); border: 1px solid var(--rule);
+  }
+}
+@keyframes signal { to { stroke-dashoffset: -10; } }
 
 /* Portfolio sections: Swiss two-zone grid on wide screens */
 [data-section] > .requirement { font: 0.75rem var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
@@ -146,13 +197,24 @@ button:hover { border-color: var(--accent); color: var(--accent); }
 .pending { margin: 0; padding: 0.5rem 0.75rem; border: 1px dashed var(--muted); color: var(--muted); font-size: 0.875rem; }
 .pending::before { content: "PENDING"; display: block; font: 600 0.6875rem var(--mono); letter-spacing: 0.08em; color: var(--accent); }
 [data-item][data-status="draft"] > :is(h3, h4)::after { content: " · DRAFT"; font: 600 0.6875rem var(--mono); letter-spacing: 0.08em; color: var(--accent); }
-/* Item bodies read as YAML: key: on one line, indented value below. */
-.yaml { margin: 0; font: 0.8125rem/1.6 var(--mono); }
-.yaml dt { color: var(--accent); }
+/* Item bodies read as YAML: key: on one line, value indented below on a guide rule,
+   kept to a readable measure. */
+.yaml { margin: 0; font: 0.8125rem/1.65 var(--mono); }
+.yaml dt { color: var(--accent); letter-spacing: 0.01em; }
 .yaml dt::after { content: ":"; }
-.yaml dd { margin: 0 0 0.5rem 2ch; }
+.yaml dd { max-width: 62ch; margin: 0.125rem 0 0.875rem 0.5ch; padding-left: 1.5ch; border-left: 1px solid var(--rule); }
+.yaml dd:last-child { margin-bottom: 0; }
 .yaml ul { list-style: none; margin: 0; padding: 0; }
+.yaml li { padding-left: 2ch; text-indent: -2ch; }
+.yaml li + li { margin-top: 0.25rem; }
 .yaml li::before { content: "- "; color: var(--muted); }
+[data-item] > :is(h3, h4) { margin-bottom: 0.625rem; }
+[data-item] > p { max-width: 62ch; }
+@media (max-width: 30rem) {
+  .items { gap: 1.75rem; }
+  .yaml { font-size: 0.875rem; line-height: 1.6; }
+  .yaml dd { padding-left: 1ch; }
+}
 [data-section] [data-section] { margin-top: 2rem; }
 @media (min-width: 56rem) {
   main > [data-section] { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-flow: dense; column-gap: 1.5rem; }
@@ -176,9 +238,8 @@ button:hover { border-color: var(--accent); color: var(--accent); }
 
 @media print {
   :root { --bg: #fff; --fg: #111; --muted: #444; --rule: #bbb; --accent: #b3360b; color-scheme: light; }
-  .site-nav, .entry, .tower-canvas, .tower-labels, .tower-controls, .tower-note, .skip-descent, .descent-tower, .audit-panel { display: none !important; }
+  .site-nav, .entry, .tower-viewport, .tower-labels, .tower-toolbar, .skip-descent, .descent-tower, .depth-readout, .audit-panel { display: none !important; }
   .is-live .tower-fallback { display: block; }
-  .is-live .tower-stage { aspect-ratio: auto; border: 0; }
   .tower-fallback { filter: invert(1); }
   .descent-track { height: auto !important; }
   .descent-view { position: static !important; height: auto !important; }
