@@ -7,7 +7,7 @@
   framework, build step, or runtime dependency.
 - `index.html` is the canonical semantic content, facts, and section metadata source.
 - `css/site.css` owns site styling and responsive, reduced-motion, and print behavior.
-- `js/main.js` loads enhancements; keep command, GIS, descent, and audit behavior modular.
+- `js/main.js` loads enhancements; keep command, nav, GIS, and audit behavior modular.
 - `specs/001-portfolio-experience/` contains feature requirements, plan, research,
   contracts, tasks, and validation guidance.
 - `.specify/memory/constitution.md` is the governing project authority. Resolve conflicts
@@ -15,8 +15,14 @@
 
 ## Product and content requirements
 
-- Preserve the command-style entry, Willis Tower wireframe, and underground descent.
-  Do not replace them with a generic template without the author's approval.
+- Identity comes first: name, role, background, resume actions, LinkedIn, GitHub, and contact
+  stay in the first view. Desktop uses a 75/25 grid: portfolio on the left, the Willis Tower
+  wireframe as a supporting instrument on the right; phones stack them.
+- Preserve the Willis Tower wireframe and keep its research tables in the collapsed technical
+  panel. The command line is optional and secondary. The underground descent was retired at the
+  author's direction (constitution v2.0.0); do not reintroduce it without approval.
+- Business stays a visible subsection of Leadership (`#business` inside `#leadership`) so the
+  assignment section remains present.
 - Keep all portfolio content readable and navigable without JavaScript. Interactive stages
   enhance the semantic page; they must not gate access to sections.
 - Preserve keyboard access, visible focus, reduced-motion behavior, responsive layouts,

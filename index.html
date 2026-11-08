@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jordan Stephens · Portfolio</title>
-  <meta name="description" content="Jordan Stephens: i.c.stars C60 digital portfolio covering identity, leadership, business, technology, and career planning.">
+  <meta name="description" content="Jordan Stephens, Technology &amp; Leadership Intern at i.c.stars: resume, technology, leadership, career goals, and contact.">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="css/site.css">
   <script type="module" src="js/main.js"></script>
@@ -12,250 +12,110 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="profile" id="profile">
-      <h1>Jordan Stephens</h1>
-      <ul class="profile-links">
-        <li><a data-profile="email" data-status="supplied" href="mailto:jstephens@icstars.org">jstephens@icstars.org</a></li>
-        <li><span data-profile="location" data-status="supplied">Chicago, IL</span></li>
-        <li><span data-profile="resume-view" data-status="pending">Resume: link pending</span></li>
-        <li><span data-profile="resume-download" data-status="pending">Resume download: pending</span></li>
-        <li><a data-profile="linkedin" data-status="supplied" href="https://www.linkedin.com/in/jordanstephensdata">LinkedIn</a></li>
-        <li><a data-profile="github" data-status="supplied" href="https://github.com/jstephens-create">GitHub</a></li>
-      </ul>
-    </div>
-  </header>
-
   <nav class="site-nav" aria-label="Portfolio sections">
     <ol>
       <li><a href="#identity"><span class="index">01</span> Identity</a></li>
-      <li><a href="#leadership"><span class="index">02</span> Leadership</a></li>
-      <li><a href="#business"><span class="index">03</span> Business</a></li>
-      <li><a href="#technology"><span class="index">04</span> Technology</a></li>
+      <li><a href="#resume"><span class="index">02</span> Resume</a></li>
+      <li><a href="#technology"><span class="index">03</span> Technology</a></li>
+      <li><a href="#leadership"><span class="index">04</span> Leadership</a></li>
       <li><a href="#career"><span class="index">05</span> Career</a></li>
       <li><a href="#contact"><span class="index">06</span> Contact</a></li>
     </ol>
   </nav>
 
+  <div class="layout">
   <main id="main">
-    <section id="entry" class="entry">
-      <h2 class="visually-hidden">Entry</h2>
-      <form class="prompt" action="#gis">
-        <label for="command">Command</label>
-        <div class="prompt-line">
-          <span class="prompt-mark" aria-hidden="true">&gt;</span>
-          <input id="command" name="command" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="go" placeholder="begin">
-          <button type="submit">Enter</button>
-        </div>
-        <p class="prompt-status" role="status" aria-live="polite"></p>
-      </form>
-      <ul class="suggestions" aria-label="Commands">
-        <li><a href="#gis">begin</a></li>
-        <li><a href="#identity">identity</a></li>
-        <li><a href="#leadership">leadership</a></li>
-        <li><a href="#business">business</a></li>
-        <li><a href="#technology">technology</a></li>
-        <li><a href="#career">career</a></li>
-        <li><a href="#profile">resume</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
-    </section>
-
-    <section id="gis" class="gis">
-      <h2>Willis Tower</h2>
-      <p class="lede">233_S_WACKER · A wireframe of the bundled-tube structure, drawn only from the figures in the table below. Each figure says whether it is verified, approximate, or interpretation.</p>
-      <div class="tower-stage">
-        <img class="tower-fallback" src="assets/svg/willis-elevation.svg" width="320" height="720" alt="Elevation and plan drawing of Willis Tower: nine 75-foot square tubes rise together to floor 50, then step back at floors 50, 66, and 90, leaving two tubes to the roof at floor 108.">
+    <section id="identity" class="identity" data-section data-minimum="0" aria-labelledby="name">
+      <div class="hero" id="profile">
+        <p class="eyebrow"><span class="index">01</span> Identity</p>
+        <h1 id="name">Jordan Stephens</h1>
+        <p class="role">Technology &amp; Leadership Intern · i.c.stars · <span data-profile="location" data-status="supplied">Chicago, IL</span></p>
+        <p class="summary">Background in manufacturing, mechanical design, quality assurance, and technology. Now focused on software engineering, data systems, and technical design.</p>
+        <ul class="actions">
+          <li><a class="button primary" data-profile="resume-view" data-status="supplied" href="assets/resume/Jordan_Stephens_Resume.pdf" target="_blank" rel="noopener">View Resume<span class="visually-hidden"> (PDF, opens in a new tab)</span></a></li>
+          <li><a class="button" data-profile="resume-download" data-status="supplied" href="assets/resume/Jordan_Stephens_Resume.pdf" download>Download Resume</a></li>
+          <li><a class="button" data-profile="linkedin" data-status="supplied" href="https://www.linkedin.com/in/jordanstephensdata">LinkedIn</a></li>
+          <li><a class="button" data-profile="github" data-status="supplied" href="https://github.com/jstephens-create">GitHub</a></li>
+          <li><a class="button" data-profile="email" data-status="supplied" href="mailto:jstephens@icstars.org">jstephens@icstars.org</a></li>
+        </ul>
       </div>
-      <table class="facts">
-        <caption>Willis Tower: technical data</caption>
-        <thead>
-          <tr><th scope="col">Fact</th><th scope="col">Value</th><th scope="col">Classification</th><th scope="col">Source</th></tr>
-        </thead>
-        <tbody>
-          <tr data-fact="address" data-class="verified"><th scope="row">Address</th><td>233 South Wacker Drive, Chicago 60606</td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a>, <a href="https://www.openstreetmap.org/way/380868216">OSM</a></td></tr>
-          <tr data-fact="coordinates" data-class="verified"><th scope="row">Location</th><td>41.87874° N, 87.63596° W</td><td>Verified</td><td><a href="https://nominatim.openstreetmap.org/search?q=Willis+Tower+Chicago&amp;format=json">Nominatim (OSM way 380868216)</a></td></tr>
-          <tr data-fact="height-architectural" data-class="verified" data-value="1451"><th scope="row">Architectural height</th><td>442.1 m / 1,451 ft</td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a> (SOM: 1,450 ft)</td></tr>
-          <tr data-fact="height-occupied" data-class="verified" data-value="1354"><th scope="row">Highest occupied floor</th><td>412.7 m / 1,354 ft</td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a></td></tr>
-          <tr data-fact="height-tip" data-class="verified" data-value="1729"><th scope="row">Height to antenna tip</th><td>527 m / 1,729 ft</td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a></td></tr>
-          <tr data-fact="floors-above" data-class="verified" data-value="108"><th scope="row">Floors above ground</th><td>108 <small>(SOM, CAC, and city data cite 110)</small></td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a></td></tr>
-          <tr data-fact="floors-below" data-class="verified" data-value="3"><th scope="row">Floors below ground</th><td>3</td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a></td></tr>
-          <tr data-fact="completed" data-class="verified"><th scope="row">Completed</th><td>1974 <small>(SOM also cites 1973)</small></td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a>, <a href="https://www.architecture.org/learn/resources/buildings-of-chicago/building/willis-tower/">CAC</a></td></tr>
-          <tr data-fact="design" data-class="verified"><th scope="row">Architect / structural engineer</th><td>SOM: Bruce Graham, Fazlur Khan</td><td>Verified</td><td><a href="https://www.architecture.org/learn/resources/buildings-of-chicago/building/willis-tower/">CAC</a></td></tr>
-          <tr data-fact="structure" data-class="verified"><th scope="row">Structural system</th><td>Bundled tube: 9 tubes in a 3×3 grid</td><td>Verified</td><td><a href="https://www.som.com/projects/willis-tower/">SOM</a></td></tr>
-          <tr data-fact="tube-size" data-class="verified" data-value="75"><th scope="row">Tube plan size</th><td>75 × 75 ft (22.9 m)</td><td>Verified</td><td><a href="https://www.som.com/projects/willis-tower/">SOM</a></td></tr>
-          <tr data-fact="base-size" data-class="approximate" data-value="225"><th scope="row">Base plan size</th><td>225 × 225 ft (68.6 m)</td><td>Approximate</td><td>Derived: 3 × 75 ft tube (<a href="https://www.som.com/projects/willis-tower/">SOM</a>)</td></tr>
-          <tr data-fact="site-area" data-class="verified"><th scope="row">Site area</th><td>3 acres</td><td>Verified</td><td><a href="https://www.som.com/projects/willis-tower/">SOM</a></td></tr>
-          <tr data-fact="orientation" data-class="approximate" data-value="1"><th scope="row">Orientation</th><td>Street grid, about 1° from true north</td><td>Approximate</td><td>Calculated from <a href="https://www.openstreetmap.org/way/380868216">OSM polygon nodes</a></td></tr>
-          <tr data-fact="setback-50" data-class="approximate" data-value="50"><th scope="row">Floor 50: NW and SE tubes end</th><td>7 tubes continue</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>); <a href="https://www.som.com/projects/willis-tower/">SOM</a> confirms all 9 tubes reach floor 50</td></tr>
-          <tr data-fact="setback-66" data-class="approximate" data-value="66"><th scope="row">Floor 66: NE and SW tubes end</th><td>5 tubes continue</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>)</td></tr>
-          <tr data-fact="setback-90" data-class="approximate" data-value="90"><th scope="row">Floor 90: N, E, and S tubes end</th><td>2 tubes continue (W and center)</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>)</td></tr>
-          <tr data-fact="column-spacing" data-class="approximate" data-value="15"><th scope="row">Perimeter column spacing</th><td>15 ft (4.6 m) on center</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>)</td></tr>
-          <tr data-fact="floor-height" data-class="approximate" data-value="12.5"><th scope="row">Typical floor-to-floor</th><td>about 12.5 ft</td><td>Approximate</td><td>Derived: 1,354 ft ÷ 108 floors (an average, not a stated figure)</td></tr>
-          <tr data-fact="antenna-each" data-class="pending"><th scope="row">Individual antenna heights</th><td></td><td>Pending verification</td><td>Not stated by any source checked</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="descent" class="descent">
-      <h2>Beneath the Loop</h2>
-      <a class="skip-descent" href="#identity">Skip to portfolio</a>
-      <div class="descent-track">
-        <div class="descent-view">
-          <div class="descent-strip">
-            <img class="descent-tower" src="assets/svg/willis-elevation.svg" width="320" height="720" alt="">
-            <svg class="cutaway" viewBox="0 0 420 800" aria-labelledby="cutaway-title cutaway-desc">
-              <title id="cutaway-title">Cutaway section beneath Willis Tower</title>
-              <desc id="cutaway-desc">A drafted section from street level to limestone bedrock about 100 feet down: Lower Wacker Drive, the Loop Pedway shown as context with no known connection to the tower, the freight tunnel level at 40 feet, the basement 43 feet below Franklin Street, caissons, and bedrock. Six labeled levels link to the portfolio sections, from Identity at street level to Contact at bedrock. Level spacing is interpretation; depths come from the underground data table.</desc>
-              <defs>
-                <pattern id="hatch-soil" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                  <line x1="0" y1="0" x2="0" y2="10" stroke="currentColor" stroke-width="0.6" opacity="0.3"/>
-                </pattern>
-                <pattern id="hatch-concrete" width="8" height="8" patternUnits="userSpaceOnUse">
-                  <circle cx="2" cy="2" r="0.8" fill="currentColor" opacity="0.55"/>
-                  <circle cx="6" cy="6" r="0.5" fill="currentColor" opacity="0.4"/>
-                </pattern>
-                <pattern id="hatch-rock" width="24" height="12" patternUnits="userSpaceOnUse">
-                  <path d="M0 0H24M0 6H24M6 0V6M18 6V12" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.5"/>
-                </pattern>
-              </defs>
-
-              <!-- Vertical scale: y = 40 + 6.5 × depth in feet. Horizontal is schematic. -->
-              <rect x="150" y="40" width="270" height="650" fill="url(#hatch-soil)"/>
-              <rect x="150" y="690" width="270" height="110" fill="url(#hatch-rock)"/>
-              <path class="cut-line" d="M150 40H420M150 690H420"/>
-              <rect class="cut-solid" x="230" y="0" width="100" height="40"/>
-
-              <rect class="cut-void" x="158" y="48" width="64" height="56" stroke-dasharray="4 3"/>
-              <text class="cut-label" x="190" y="68" text-anchor="middle">LOWER WACKER</text>
-              <text class="cut-note" x="190" y="80" text-anchor="middle">depth</text>
-              <text class="cut-note" x="190" y="90" text-anchor="middle">schematic</text>
-
-              <rect class="cut-void" x="342" y="90" width="70" height="30" stroke-dasharray="4 3"/>
-              <text class="cut-label" x="377" y="109" text-anchor="middle">PEDWAY</text>
-              <text class="cut-note" x="377" y="132" text-anchor="middle">no known</text>
-              <text class="cut-note" x="377" y="142" text-anchor="middle">connection to</text>
-              <text class="cut-note" x="377" y="152" text-anchor="middle">Willis Tower</text>
-
-              <rect class="cut-void" x="230" y="40" width="100" height="279.5"/>
-              <rect x="230" y="40" width="100" height="279.5" fill="url(#hatch-concrete)"/>
-              <text class="cut-label" x="280" y="190" text-anchor="middle">BASEMENT</text>
-              <text class="cut-note" x="280" y="202" text-anchor="middle">43 ft · approx.</text>
-
-              <path class="cut-void" d="M361 300V270A19.5 19.5 0 0 1 400 270V300Z"/>
-              <text class="cut-label" x="380" y="314" text-anchor="middle">TUNNEL 40 ft</text>
-              <text class="cut-note" x="380" y="326" text-anchor="middle">approx.</text>
-              <text class="cut-note" x="380" y="338" text-anchor="middle">location</text>
-              <text class="cut-note" x="380" y="350" text-anchor="middle">not verified</text>
-
-              <g class="caissons">
-                <rect class="cut-void" x="238" y="319.5" width="12" height="370.5"/>
-                <rect class="cut-void" x="262" y="319.5" width="12" height="370.5"/>
-                <rect class="cut-void" x="286" y="319.5" width="12" height="370.5"/>
-                <rect class="cut-void" x="310" y="319.5" width="12" height="370.5"/>
-              </g>
-              <text class="cut-label" x="336" y="480">CAISSONS</text>
-              <text class="cut-note" x="336" y="492">to bedrock</text>
-              <text class="cut-note" x="336" y="504">verified</text>
-              <text class="cut-note" x="336" y="516">≤ 10 ft dia.</text>
-              <text class="cut-note" x="336" y="528">approx.</text>
-              <text class="cut-note" x="336" y="540">representative</text>
-
-              <text class="cut-label" x="285" y="735" text-anchor="middle">LIMESTONE BEDROCK</text>
-              <text class="cut-note" x="285" y="747" text-anchor="middle">≈ 100 ft · approx.</text>
-              <text class="cut-note" x="415" y="34" text-anchor="end">STREET · 0 ft</text>
-
-              <g class="depth-scale">
-                <path class="cut-line" d="M150 40V800M144 40H150M144 170H150M144 300H150M144 430H150M144 560H150M144 690H150M147 105H150M147 235H150M147 365H150M147 495H150M147 625H150M147 755H150"/>
-                <text class="cut-note" x="142" y="30" text-anchor="end">ft</text>
-                <text class="cut-note" x="142" y="43" text-anchor="end">0</text>
-                <text class="cut-note" x="142" y="173" text-anchor="end">20</text>
-                <text class="cut-note" x="142" y="303" text-anchor="end">40</text>
-                <text class="cut-note" x="142" y="433" text-anchor="end">60</text>
-                <text class="cut-note" x="142" y="563" text-anchor="end">80</text>
-                <text class="cut-note" x="142" y="693" text-anchor="end">100</text>
-              </g>
-
-              <g class="levels">
-                <a class="level" href="#identity" data-level="identity" aria-label="01 Identity. Level: street level, the 0 ft datum.">
-                  <rect x="0" y="18" width="124" height="56"/><path d="M124 46H138L230 40"/><circle cx="230" cy="40" r="3"/>
-                  <text x="6" y="38" class="level-title">01 IDENTITY</text><text x="6" y="54" class="level-layer">Street level</text><text x="6" y="68" class="level-depth">datum · 0 ft</text>
-                </a>
-                <a class="level" href="#leadership" data-level="leadership" aria-label="02 Leadership. Level: Lower Wacker Drive, depth schematic.">
-                  <rect x="0" y="150" width="124" height="56"/><path d="M124 178H138L158 76"/><circle cx="158" cy="76" r="3"/>
-                  <text x="6" y="170" class="level-title">02 LEADERSHIP</text><text x="6" y="186" class="level-layer">Lower Wacker</text><text x="6" y="200" class="level-depth">depth schematic</text>
-                </a>
-                <a class="level" href="#business" data-level="business" aria-label="03 Business. Level: Pedway, shown as context with no known connection to the tower.">
-                  <rect x="0" y="282" width="124" height="56"/><path d="M124 310H138L342 105"/><circle cx="342" cy="105" r="3"/>
-                  <text x="6" y="302" class="level-title">03 BUSINESS</text><text x="6" y="318" class="level-layer">Pedway (context)</text><text x="6" y="332" class="level-depth">no known connection</text>
-                </a>
-                <a class="level" href="#technology" data-level="technology" aria-label="04 Technology. Level: freight tunnel, about 40 ft, approximate.">
-                  <rect x="0" y="414" width="124" height="56"/><path d="M124 442H138L361 285"/><circle cx="361" cy="285" r="3"/>
-                  <text x="6" y="434" class="level-title">04 TECHNOLOGY</text><text x="6" y="450" class="level-layer">Freight tunnel</text><text x="6" y="464" class="level-depth">40 ft · approx.</text>
-                </a>
-                <a class="level" href="#career" data-level="career" aria-label="05 Career. Level: basement, about 43 ft, approximate.">
-                  <rect x="0" y="546" width="124" height="56"/><path d="M124 574H138L230 300"/><circle cx="230" cy="300" r="3"/>
-                  <text x="6" y="566" class="level-title">05 CAREER</text><text x="6" y="582" class="level-layer">Basement</text><text x="6" y="596" class="level-depth">43 ft · approx.</text>
-                </a>
-                <a class="level" href="#contact" data-level="contact" aria-label="06 Contact. Level: limestone bedrock, about 100 ft, approximate.">
-                  <rect x="0" y="678" width="124" height="56"/><path d="M124 706H138L200 730"/><circle cx="200" cy="730" r="3"/>
-                  <text x="6" y="698" class="level-title">06 CONTACT</text><text x="6" y="714" class="level-layer">Bedrock</text><text x="6" y="728" class="level-depth">≈ 100 ft · approx.</text>
-                </a>
-              </g>
-              <text class="cut-note" x="0" y="760">Level spacing:</text>
-              <text class="cut-note" x="0" y="772">interpretation</text>
-              <text class="cut-note" x="0" y="784">Horizontal scale:</text>
-              <text class="cut-note" x="0" y="796">schematic</text>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <table class="facts">
-        <caption>Ground and underground: data</caption>
-        <thead>
-          <tr><th scope="col">Fact</th><th scope="col">Value</th><th scope="col">Classification</th><th scope="col">Source</th></tr>
-        </thead>
-        <tbody>
-          <tr data-fact="block" data-class="approximate"><th scope="row">Block</th><td>Bounded by Wacker, Adams, Franklin, Jackson; Quincy St closed</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>)</td></tr>
-          <tr data-fact="basement-depth" data-class="approximate" data-value="43"><th scope="row">Lowest basement level</th><td>43 ft below Franklin St (excavation 50 ft)</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>)</td></tr>
-          <tr data-fact="foundation-type" data-class="verified"><th scope="row">Foundations</th><td>Reinforced concrete caissons to bedrock</td><td>Verified</td><td><a href="https://www.som.com/projects/willis-tower/">SOM</a></td></tr>
-          <tr data-fact="caisson-count" data-class="approximate" data-value="114"><th scope="row">Caissons reaching rock</th><td>114</td><td>Approximate</td><td>Secondary sources (<a href="https://www.pbs.org/wgbh/buildingbig/wonder/structure/sears_tower.html">PBS</a>; <a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>: 201 total, 114 to rock)</td></tr>
-          <tr data-fact="caisson-diameter" data-class="approximate" data-value="10"><th scope="row">Caisson diameter</th><td>up to 10 ft (3.0 m)</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>)</td></tr>
-          <tr data-fact="caisson-depth" data-class="pending"><th scope="row">Caisson depth</th><td></td><td>Pending verification</td><td>Not stated by any source checked</td></tr>
-          <tr data-fact="bedrock-depth" data-class="approximate" data-value="100"><th scope="row">Depth to limestone bedrock</th><td>up to about 100 ft (30 m), clay above</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>)</td></tr>
-          <tr data-fact="tunnel-depth" data-class="approximate" data-value="40"><th scope="row">Freight tunnel depth</th><td>40 ft (12.2 m) below street</td><td>Approximate</td><td>Secondary sources (<a href="https://en.wikipedia.org/wiki/Chicago_Tunnel_Company">Wikipedia</a>, <a href="https://www.wbez.org/curious-city/2013/06/20/six-tunnels-hidden-under-chicagos-loop">WBEZ</a>)</td></tr>
-          <tr data-fact="tunnel-network" data-class="approximate"><th scope="row">Freight tunnels</th><td>about 60 mi; built 1899 to about 1914; service 1906–1959; flooded 13 April 1992</td><td>Approximate</td><td>Secondary sources (<a href="https://en.wikipedia.org/wiki/Chicago_Tunnel_Company">Wikipedia</a>, <a href="https://www.wbez.org/curious-city/2013/06/20/six-tunnels-hidden-under-chicagos-loop">WBEZ</a>)</td></tr>
-          <tr data-fact="tunnel-section" data-class="approximate"><th scope="row">Tunnel cross-section</th><td>7.5 ft high × 6 ft wide</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Chicago_Tunnel_Company">Wikipedia</a>; WBEZ: 7 ft)</td></tr>
-          <tr data-fact="tunnel-here" data-class="pending"><th scope="row">Freight tunnel under this block's streets</th><td></td><td>Pending verification</td><td>Not confirmed by any source checked</td></tr>
-          <tr data-fact="lower-wacker" data-class="approximate"><th scope="row">Wacker Drive beside the tower</th><td>Two levels; South Wacker extension built 1948–1954</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Wacker_Drive">Wikipedia</a>)</td></tr>
-          <tr data-fact="pedway" data-class="approximate"><th scope="row">Pedway</th><td>Mostly a basement level; Willis Tower is not among the listed connections</td><td>Approximate</td><td>Secondary sources (<a href="https://www.choosechicago.com/blog/architecture-history/a-visitors-guide-to-navigating-the-pedway-system/">Choose Chicago</a>, <a href="https://en.wikipedia.org/wiki/Chicago_Pedway">Wikipedia</a>)</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="identity" data-section data-minimum="0">
-      <h2><span class="index">01</span> Identity</h2>
+      <figure class="headshot" data-item data-requirement="identity.headshot" data-status="final">
+        <img src="assets/img/headshot.webp" width="512" height="512" alt="Jordan Stephens smiling in a black polo shirt, in front of a gray, black, and orange architectural grid.">
+      </figure>
       <div class="items">
-        <article data-item data-requirement="identity.introduction" data-status="draft">
-          <h3>Introduction</h3>
+        <article data-item data-requirement="identity.introduction" data-status="final">
+          <h2>Introduction</h2>
           <p>I learned precision on the manufacturing floor, where a part either meets the specification or it does not. Now I bring that same patience to data as a 2026 Technology &amp; Leadership Intern at i.c.stars, studying SQL, data modeling, and JavaScript. I work slowly enough to see the structure, and steadily enough to build it. My path leads toward data architecture: systems that stay reliable as they grow.</p>
         </article>
-        <article data-item data-requirement="identity.headshot" data-status="final">
-          <h3>Headshot</h3>
-          <img src="assets/img/headshot.webp" alt="Jordan Stephens smiling in a black polo shirt, in front of a gray, black, and orange architectural grid.">
-        </article>
-        <article data-item data-requirement="identity.mission-statement" data-status="draft">
-          <h3>Mission Statement</h3>
+        <article data-item data-requirement="identity.mission-statement" data-status="final">
+          <h2>Mission Statement</h2>
           <p>To be a world changer through steady innovation: designing data systems strong enough to carry the future and reliable enough for the people who depend on them.</p>
         </article>
       </div>
     </section>
 
+    <section id="resume" data-section data-minimum="0">
+      <h2><span class="index">02</span> Resume</h2>
+      <p><a class="button primary" data-profile="resume-view" data-status="supplied" href="assets/resume/Jordan_Stephens_Resume.pdf" target="_blank" rel="noopener">Resume<span class="visually-hidden"> (PDF, opens in a new tab)</span></a></p>
+    </section>
+
+    <section id="technology" data-section data-minimum="5">
+      <h2><span class="index">03</span> Technology</h2>
+      <p class="requirement">Assignment: at least 5 items.</p>
+      <dl class="skills">
+        <div><dt>SQL</dt><dd>Joins, counts, and rankings on incident data.</dd></div>
+        <div><dt>JavaScript · HTML · CSS</dt><dd>This portfolio: ES modules and Canvas 2D, no framework.</dd></div>
+        <div><dt>Python</dt><dd>On my short-term plan, with machine learning.</dd></div>
+        <div><dt>Git · GitHub</dt><dd>Branches, pull requests, and a spec-driven workflow.</dd></div>
+        <div><dt>Data systems</dt><dd>Data model, schema, and ERD for the Medline MVP.</dd></div>
+        <div><dt>Engineering tools</dt><dd><span class="confirm">To confirm: CAD, CNC, and QA tools</span></dd></div>
+      </dl>
+      <div class="items">
+        <article data-item data-requirement="technology.web-app" data-status="final" data-source="This repository: specs/001-portfolio-experience">
+          <h3>Responsive Web Application</h3>
+          <dl class="yaml">
+            <dt>app</dt><dd>This portfolio: a responsive site in HTML, CSS, and JavaScript modules, with an interactive Willis Tower wireframe built from sourced measurements.</dd>
+            <dt>problem</dt><dd>Show my growth to employers and mentors in seconds, and keep every section readable without JavaScript.</dd>
+            <dt>my_part</dt><dd>I wrote the spec, plan, and tasks, then built and tested it with an AI coding assistant.</dd>
+          </dl>
+        </article>
+        <article data-item data-requirement="technology.debugging-growth" data-status="final" data-source="Drive: Jordan_ Stephens_Station_Instructions; T5B - Jordan Stephens">
+          <h3>Debugging and Testing</h3>
+          <dl class="yaml">
+            <dt>testing</dt><dd>I wrote three Given/When/Then test cases and logged three defects.</dd>
+            <dt>process</dt><dd>I mapped SDLC phases in Waterfall and in Agile.</dd>
+            <dt>sql</dt><dd>I joined branches to incidents with a LEFT JOIN, then counted and ranked incidents per branch.</dd>
+          </dl>
+        </article>
+        <article data-item data-requirement="technology.github-collaboration" data-status="final" data-source="GitHub: jstephens-create/portfolio2.0">
+          <h3>GitHub and Version Control</h3>
+          <dl class="yaml">
+            <dt>repo</dt><dd><a data-evidence href="https://github.com/jstephens-create/portfolio2.0">jstephens-create/portfolio2.0</a></dd>
+            <dt>workflow</dt><dd>I build features on a branch, guided by a written spec, plan, and task list, and check the work with automated tests.</dd>
+          </dl>
+        </article>
+        <article data-item data-requirement="technology.cloud-tools" data-status="final" data-source="Drive: file inventory, 2026-09-03 to 2026-10-23">
+          <h3>Cloud Tools</h3>
+          <dl class="yaml">
+            <dt>google_drive</dt><dd>I created 111 files in Google Drive in eight weeks, most of them in my cohort's shared drive.</dd>
+            <dt>versioned_workflow</dt><dd>I keep a working Google Doc and export a PDF for each submission, more than ten times so far.</dd>
+          </dl>
+        </article>
+        <article data-item data-requirement="technology.business-tools" data-status="final" data-source="Drive: BW8A Workflows That Work; medline-backlog-draft-v4-plaky-hierarchy; Team Canary Mentor Email Templates">
+          <h3>Business Tools</h3>
+          <dl class="yaml">
+            <dt>backlog</dt><dd>We built our backlog as a CSV and imported it into Plaky.</dd>
+            <dt>communication</dt><dd>Mentor emails go out through Outlook using shared team templates.</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
     <section id="leadership" data-section data-minimum="5">
-      <h2><span class="index">02</span> Leadership</h2>
+      <h2><span class="index">04</span> Leadership</h2>
       <p class="requirement">Assignment: at least 5 items.</p>
       <div class="items">
-        <article data-item data-requirement="leadership.team-week" data-status="draft" data-source="Drive: Team Week Learning Reflection &amp; Goal-Setting, 2026-09-08">
+        <article data-item data-requirement="leadership.team-week" data-status="final" data-source="Drive: Team Week Learning Reflection &amp; Goal-Setting, 2026-09-08">
           <h3>Team Week</h3>
           <dl class="yaml">
             <dt>team</dt><dd>Canary Consultants, client Medline</dd>
@@ -269,7 +129,7 @@
           <h3>Community Role</h3>
           <p class="pending">Content pending — Leadership: Community Role and leadership in service.</p>
         </article>
-        <article data-item data-requirement="leadership.feedback-workshops" data-status="draft" data-source="Drive: Planetary Responsibility Activity Worksheet, 2026-10-05; Act on Purpose Under Pressure Regulation Plan, 2026-10-06">
+        <article data-item data-requirement="leadership.feedback-workshops" data-status="final" data-source="Drive: Planetary Responsibility Activity Worksheet, 2026-10-05; Act on Purpose Under Pressure Regulation Plan, 2026-10-06">
           <h3>Feedback and Planetary Responsibility</h3>
           <dl class="yaml">
             <dt>my_responsibility</dt><dd>To serve those who serve me.</dd>
@@ -277,7 +137,7 @@
             <dt>receiving_feedback</dt><dd>Being told to slow down used to make me feel unheard. My reset: pause, so others can be heard too.</dd>
           </dl>
         </article>
-        <article data-item data-requirement="leadership.tea-debriefs" data-status="draft" data-source="Drive: Canary Retro 101, 2026-09-25; Canary LW6B Team Inclusion Audit; LW7B Self-Initiated Contribution Plan, 2026-10-23">
+        <article data-item data-requirement="leadership.tea-debriefs" data-status="final" data-source="Drive: Canary Retro 101, 2026-09-25; Canary LW6B Team Inclusion Audit; LW7B Self-Initiated Contribution Plan, 2026-10-23">
           <h3>Reflective Discussions with My Cohort</h3>
           <dl class="yaml">
             <dt>team_retro</dt><dd>We placed 4th, and we agreed our deck came together too late. I asked that conflict stay focused on the process, not the person.</dd>
@@ -285,7 +145,7 @@
             <dt>what_i_changed</dt><dd>I contribute communication and spark, check in as a friend rather than a manager, and give teammates who need more time room to adjust.</dd>
           </dl>
         </article>
-        <article data-item data-requirement="leadership.dream-speech" data-status="draft" data-source="Drive: Jordan_stephens_Dream_speech, 2026-10-23">
+        <article data-item data-requirement="leadership.dream-speech" data-status="final" data-source="Drive: Jordan_stephens_Dream_speech, 2026-10-23">
           <h3>Dream Speech</h3>
           <dl class="yaml">
             <dt>themes</dt><dd><ul><li>Joining engineering, art, and programming.</li><li>Taking opportunities before I felt fully prepared.</li><li>Meeting people where they are.</li></ul></dd>
@@ -294,92 +154,48 @@
           </dl>
         </article>
       </div>
-    </section>
 
-    <section id="business" data-section data-minimum="4">
-      <h2><span class="index">03</span> Business</h2>
-      <p class="requirement">Assignment: at least 4 items.</p>
-      <div class="items">
-        <article data-item data-requirement="business.client-project" data-status="draft" data-source="Drive: canary_problem_framing, 2026-09-21; Team Canary Executive Summary, 2026-10-11; Canary Sprint 2 Backlog">
-          <h3>Client Project</h3>
-          <dl class="yaml">
-            <dt>client</dt><dd>Medline</dd>
-            <dt>problem</dt><dd>Medline's incident data isn't missing, it's disconnected: three systems and no shared view. Repeat failures cost money, labor, and compliance and safety risk.</dd>
-            <dt>approach</dt><dd>An MVP that standardizes incident intake, uses AI to group related incidents into problem records, routes each one to a named owner, and reports predicted impact. Target: at least 25% fewer repeat incidents.</dd>
-            <dt>my_role</dt><dd>Data &amp; AI Lead. I framed the problem in our problem-framing deck.</dd>
-            <dt>my_sprint_2_work</dt><dd><ul><li>Sample incident dataset</li><li>Data model and schema</li><li>AI pattern detection, the sprint's largest item</li><li>Entity relationship diagram</li></ul></dd>
-            <dt>load</dt><dd>19 of the team's 92 story points</dd>
-          </dl>
-        </article>
-        <article data-item data-requirement="business.consulting-company" data-status="draft" data-source="Drive: Team Agreement - Canary Consulting, 2026-09-11; Canary: Team Role handout; Canary Sprint 2 Backlog">
-          <h3>Consulting Company</h3>
-          <dl class="yaml">
-            <dt>company</dt><dd>Canary Consultants</dd>
-            <dt>team</dt><dd>Five interns: project manager and scrum lead, engineering lead, product and business analyst lead, UX/UI lead, and me as Data &amp; AI Lead.</dd>
-            <dt>how_we_formed</dt><dd>We signed a team agreement on 9/11: decisions go through peer review and majority vote.</dd>
-            <dt>my_path</dt><dd>I started as illustrator and quality control, then moved into the Data &amp; AI Lead role.</dd>
-          </dl>
-        </article>
-        <article data-item data-requirement="business.mentor-feedback" data-status="draft" data-source="Drive: Adaptability Reflection LW6A, 2026-10-08; Verbal Presence Meeting Pitch BW7B, 2026-10-15; Team Canary Mentor Email Templates">
-          <h3>Mentors, Clients, and Guest Consultants</h3>
-          <dl class="yaml">
-            <dt>cadence</dt><dd>Our team meets Medline mentors twice a week.</dd>
-            <dt>adapting</dt><dd>When the client changed direction, I saw it first as a threat, then as a chance to learn. My commitment: stand up, stay open, and absorb what the client needs.</dd>
-            <dt>professionalism</dt><dd>In a context, point, next-step meeting pitch, I raised the risk that teammates feeling behind could affect the MVP.</dd>
-          </dl>
-        </article>
-      </div>
-    </section>
-
-    <section id="technology" data-section data-minimum="5">
-      <h2><span class="index">04</span> Technology</h2>
-      <p class="requirement">Assignment: at least 5 items.</p>
-      <div class="items">
-        <article data-item data-requirement="technology.web-app" data-status="draft" data-source="This repository: specs/001-portfolio-experience">
-          <h3>Responsive Web Application</h3>
-          <dl class="yaml">
-            <dt>app</dt><dd>This portfolio: a responsive site in HTML, CSS, and JavaScript modules, with a command-style entry, a Willis Tower wireframe, and an underground descent.</dd>
-            <dt>problem</dt><dd>Show my growth to employers and mentors in seconds, and keep every section readable without JavaScript.</dd>
-            <dt>my_part</dt><dd>I wrote the spec, plan, and tasks, then built and tested it with an AI coding assistant.</dd>
-          </dl>
-        </article>
-        <article data-item data-requirement="technology.debugging-growth" data-status="draft" data-source="Drive: Jordan_ Stephens_Station_Instructions; T5B - Jordan Stephens">
-          <h3>Debugging and Testing</h3>
-          <dl class="yaml">
-            <dt>testing</dt><dd>I wrote three Given/When/Then test cases and logged three defects.</dd>
-            <dt>process</dt><dd>I mapped SDLC phases in Waterfall and in Agile.</dd>
-            <dt>sql</dt><dd>I joined branches to incidents with a LEFT JOIN, then counted and ranked incidents per branch.</dd>
-          </dl>
-        </article>
-        <article data-item data-requirement="technology.github-collaboration" data-status="draft" data-source="GitHub: jstephens-create/portfolio2.0">
-          <h3>GitHub and Version Control</h3>
-          <dl class="yaml">
-            <dt>repo</dt><dd><a data-evidence href="https://github.com/jstephens-create/portfolio2.0">jstephens-create/portfolio2.0</a></dd>
-            <dt>workflow</dt><dd>I build features on a branch, guided by a written spec, plan, and task list, and check the work with automated tests.</dd>
-          </dl>
-        </article>
-        <article data-item data-requirement="technology.cloud-tools" data-status="draft" data-source="Drive: file inventory, 2026-09-03 to 2026-10-23">
-          <h3>Cloud Tools</h3>
-          <dl class="yaml">
-            <dt>google_drive</dt><dd>I created 111 files in Google Drive in eight weeks, most of them in my cohort's shared drive.</dd>
-            <dt>versioned_workflow</dt><dd>I keep a working Google Doc and export a PDF for each submission, more than ten times so far.</dd>
-          </dl>
-        </article>
-        <article data-item data-requirement="technology.business-tools" data-status="draft" data-source="Drive: BW8A Workflows That Work; medline-backlog-draft-v4-plaky-hierarchy; Team Canary Mentor Email Templates">
-          <h3>Business Tools</h3>
-          <dl class="yaml">
-            <dt>backlog</dt><dd>We built our backlog as a CSV and imported it into Plaky.</dd>
-            <dt>communication</dt><dd>Mentor emails go out through Outlook using shared team templates.</dd>
-          </dl>
-        </article>
-      </div>
+      <section id="business" data-section data-minimum="4" aria-labelledby="business-title">
+        <h3 id="business-title">Business</h3>
+        <p class="requirement">Assignment: at least 4 items.</p>
+        <div class="items">
+          <article data-item data-requirement="business.client-project" data-status="final" data-source="Drive: canary_problem_framing, 2026-09-21; Team Canary Executive Summary, 2026-10-11; Canary Sprint 2 Backlog">
+            <h4>Client Project</h4>
+            <dl class="yaml">
+              <dt>client</dt><dd>Medline</dd>
+              <dt>problem</dt><dd>Medline's incident data isn't missing, it's disconnected: three systems and no shared view. Repeat failures cost money, labor, and compliance and safety risk.</dd>
+              <dt>approach</dt><dd>An MVP that standardizes incident intake, uses AI to group related incidents into problem records, routes each one to a named owner, and reports predicted impact. Target: at least 25% fewer repeat incidents.</dd>
+              <dt>my_role</dt><dd>Data &amp; AI Lead. I framed the problem in our problem-framing deck.</dd>
+              <dt>my_sprint_2_work</dt><dd><ul><li>Sample incident dataset</li><li>Data model and schema</li><li>AI pattern detection, the sprint's largest item</li><li>Entity relationship diagram</li></ul></dd>
+              <dt>load</dt><dd>19 of the team's 92 story points</dd>
+            </dl>
+          </article>
+          <article data-item data-requirement="business.consulting-company" data-status="final" data-source="Drive: Team Agreement - Canary Consulting, 2026-09-11; Canary: Team Role handout; Canary Sprint 2 Backlog">
+            <h4>Consulting Company</h4>
+            <dl class="yaml">
+              <dt>company</dt><dd>Canary Consultants</dd>
+              <dt>team</dt><dd>Five interns: project manager and scrum lead, engineering lead, product and business analyst lead, UX/UI lead, and me as Data &amp; AI Lead.</dd>
+              <dt>how_we_formed</dt><dd>We signed a team agreement on 9/11: decisions go through peer review and majority vote.</dd>
+              <dt>my_path</dt><dd>I started as illustrator and quality control, then moved into the Data &amp; AI Lead role.</dd>
+            </dl>
+          </article>
+          <article data-item data-requirement="business.mentor-feedback" data-status="final" data-source="Drive: Adaptability Reflection LW6A, 2026-10-08; Verbal Presence Meeting Pitch BW7B, 2026-10-15; Team Canary Mentor Email Templates">
+            <h4>Mentors, Clients, and Guest Consultants</h4>
+            <dl class="yaml">
+              <dt>cadence</dt><dd>Our team meets Medline mentors twice a week.</dd>
+              <dt>adapting</dt><dd>When the client changed direction, I saw it first as a threat, then as a chance to learn. My commitment: stand up, stay open, and absorb what the client needs.</dd>
+              <dt>professionalism</dt><dd>In a context, point, next-step meeting pitch, I raised the risk that teammates feeling behind could affect the MVP.</dd>
+            </dl>
+          </article>
+        </div>
+      </section>
     </section>
 
     <section id="career" data-section data-minimum="4">
       <h2><span class="index">05</span> Career Planning</h2>
       <p class="requirement">Assignment: at least 4 items.</p>
       <div class="items">
-        <article data-item data-requirement="career.career-plans" data-status="draft" data-source="Drive: FY2026 My Career Development Roadmap Reflection Worksheet, 2026-10-08">
+        <article data-item data-requirement="career.career-plans" data-status="final" data-source="Drive: FY2026 My Career Development Roadmap Reflection Worksheet, 2026-10-08">
           <h3>Career Plans</h3>
           <dl class="yaml">
             <dt>short_term</dt><dd>Learn Python and machine learning, and land a data role.</dd>
@@ -387,7 +203,7 @@
             <dt>what_changed</dt><dd>Setting goals used to be a struggle. Now it is how I track my progress.</dd>
           </dl>
         </article>
-        <article data-item data-requirement="career.resume-prep" data-status="draft" data-source="Drive: Jordan_Stephens_Resume_Feedback.xlsx, 2026-10-09">
+        <article data-item data-requirement="career.resume-prep" data-status="final" data-source="Drive: Jordan_Stephens_Resume_Feedback.xlsx, 2026-10-09">
           <h3>Resume and Job Search</h3>
           <dl class="yaml">
             <dt>feedback</dt><dd>My manufacturing and quality-control history gives me a stronger technical foundation than a classroom-only applicant.</dd>
@@ -395,14 +211,14 @@
             <dt>working_on</dt><dd>A sharper summary, more quantified results, and clearer role positioning.</dd>
           </dl>
         </article>
-        <article data-item data-requirement="career.professional-brand" data-status="draft" data-source="Drive: Networking Shopping Cart, 2026-10-21; Planetary Responsibility Activity Worksheet, 2026-10-05">
+        <article data-item data-requirement="career.professional-brand" data-status="final" data-source="Drive: Networking Shopping Cart, 2026-10-21; Planetary Responsibility Activity Worksheet, 2026-10-05">
           <h3>Professional Brand</h3>
           <dl class="yaml">
             <dt>story</dt><dd>My background in manufacturing, CNC machining, and quality assurance made me curious about how complex systems operate.</dd>
             <dt>values</dt><dd><ul><li>Service</li><li>Curiosity</li><li>Precision</li></ul></dd>
           </dl>
         </article>
-        <article data-item data-requirement="career.target-roles" data-status="draft" data-source="Drive: FY2026 My Career Development Roadmap Reflection Worksheet, 2026-10-08; Jordan_Stephens_Resume_Feedback.xlsx">
+        <article data-item data-requirement="career.target-roles" data-status="final" data-source="Drive: FY2026 My Career Development Roadmap Reflection Worksheet, 2026-10-08; Jordan_Stephens_Resume_Feedback.xlsx">
           <h3>Target Roles</h3>
           <dl class="yaml">
             <dt>now</dt><dd>Quality and data operations, junior data support.</dd>
@@ -415,14 +231,70 @@
 
     <section id="contact" data-section data-minimum="0">
       <h2><span class="index">06</span> Contact</h2>
+      <p class="contact-lede">Open to roles in quality and data operations and junior data support.</p>
       <ul class="contact-links">
         <li><a data-profile="email" data-status="supplied" href="mailto:jstephens@icstars.org">jstephens@icstars.org</a></li>
-        <li><span data-profile="location" data-status="supplied">Chicago, IL</span></li>
         <li><a data-profile="linkedin" data-status="supplied" href="https://www.linkedin.com/in/jordanstephensdata">LinkedIn</a></li>
         <li><a data-profile="github" data-status="supplied" href="https://github.com/jstephens-create">GitHub</a></li>
+        <li><span data-profile="location" data-status="supplied">Chicago, IL</span></li>
       </ul>
     </section>
   </main>
+
+  <aside id="gis" class="gis" aria-labelledby="gis-title">
+    <p class="eyebrow">Technical study</p>
+    <h2 id="gis-title">Willis Tower</h2>
+    <p class="lede">233 S Wacker Dr. A wireframe of the bundled-tube structure, drawn only from published figures. Each figure is labeled verified, approximate, or interpretation.</p>
+    <div class="tower-stage">
+      <img class="tower-fallback" src="assets/svg/willis-elevation.svg" width="320" height="720" alt="Elevation and plan drawing of Willis Tower: nine 75-foot square tubes rise together to floor 50, then step back at floors 50, 66, and 90, leaving two tubes to the roof at floor 108.">
+    </div>
+    <details class="tech-details">
+      <summary>Technical data and sources</summary>
+      <div class="table-scroll" role="region" aria-labelledby="facts-caption" tabindex="0">
+        <table class="facts">
+          <caption id="facts-caption">Willis Tower: technical data</caption>
+          <thead>
+            <tr><th scope="col">Fact</th><th scope="col">Value</th><th scope="col">Classification</th><th scope="col">Source</th></tr>
+          </thead>
+          <tbody>
+            <tr data-fact="address" data-class="verified"><th scope="row">Address</th><td>233 South Wacker Drive, Chicago 60606</td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a>, <a href="https://www.openstreetmap.org/way/380868216">OSM</a></td></tr>
+            <tr data-fact="coordinates" data-class="verified"><th scope="row">Location</th><td>41.87874° N, 87.63596° W</td><td>Verified</td><td><a href="https://nominatim.openstreetmap.org/search?q=Willis+Tower+Chicago&amp;format=json">Nominatim (OSM way 380868216)</a></td></tr>
+            <tr data-fact="height-architectural" data-class="verified" data-value="1451"><th scope="row">Architectural height</th><td>442.1 m / 1,451 ft</td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a> (SOM: 1,450 ft)</td></tr>
+            <tr data-fact="height-occupied" data-class="verified" data-value="1354"><th scope="row">Highest occupied floor</th><td>412.7 m / 1,354 ft</td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a></td></tr>
+            <tr data-fact="height-tip" data-class="verified" data-value="1729"><th scope="row">Height to antenna tip</th><td>527 m / 1,729 ft</td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a></td></tr>
+            <tr data-fact="floors-above" data-class="verified" data-value="108"><th scope="row">Floors above ground</th><td>108 <small>(SOM, CAC, and city data cite 110)</small></td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a></td></tr>
+            <tr data-fact="floors-below" data-class="verified" data-value="3"><th scope="row">Floors below ground</th><td>3</td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a></td></tr>
+            <tr data-fact="completed" data-class="verified"><th scope="row">Completed</th><td>1974 <small>(SOM also cites 1973)</small></td><td>Verified</td><td><a href="https://www.skyscrapercenter.com/building/willis-tower/169">CTBUH</a>, <a href="https://www.architecture.org/learn/resources/buildings-of-chicago/building/willis-tower/">CAC</a></td></tr>
+            <tr data-fact="design" data-class="verified"><th scope="row">Architect / structural engineer</th><td>SOM: Bruce Graham, Fazlur Khan</td><td>Verified</td><td><a href="https://www.architecture.org/learn/resources/buildings-of-chicago/building/willis-tower/">CAC</a></td></tr>
+            <tr data-fact="structure" data-class="verified"><th scope="row">Structural system</th><td>Bundled tube: 9 tubes in a 3×3 grid</td><td>Verified</td><td><a href="https://www.som.com/projects/willis-tower/">SOM</a></td></tr>
+            <tr data-fact="tube-size" data-class="verified" data-value="75"><th scope="row">Tube plan size</th><td>75 × 75 ft (22.9 m)</td><td>Verified</td><td><a href="https://www.som.com/projects/willis-tower/">SOM</a></td></tr>
+            <tr data-fact="base-size" data-class="approximate" data-value="225"><th scope="row">Base plan size</th><td>225 × 225 ft (68.6 m)</td><td>Approximate</td><td>Derived: 3 × 75 ft tube (<a href="https://www.som.com/projects/willis-tower/">SOM</a>)</td></tr>
+            <tr data-fact="site-area" data-class="verified"><th scope="row">Site area</th><td>3 acres</td><td>Verified</td><td><a href="https://www.som.com/projects/willis-tower/">SOM</a></td></tr>
+            <tr data-fact="orientation" data-class="approximate" data-value="1"><th scope="row">Orientation</th><td>Street grid, about 1° from true north</td><td>Approximate</td><td>Calculated from <a href="https://www.openstreetmap.org/way/380868216">OSM polygon nodes</a></td></tr>
+            <tr data-fact="setback-50" data-class="approximate" data-value="50"><th scope="row">Floor 50: NW and SE tubes end</th><td>7 tubes continue</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>); <a href="https://www.som.com/projects/willis-tower/">SOM</a> confirms all 9 tubes reach floor 50</td></tr>
+            <tr data-fact="setback-66" data-class="approximate" data-value="66"><th scope="row">Floor 66: NE and SW tubes end</th><td>5 tubes continue</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>)</td></tr>
+            <tr data-fact="setback-90" data-class="approximate" data-value="90"><th scope="row">Floor 90: N, E, and S tubes end</th><td>2 tubes continue (W and center)</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>)</td></tr>
+            <tr data-fact="column-spacing" data-class="approximate" data-value="15"><th scope="row">Perimeter column spacing</th><td>15 ft (4.6 m) on center</td><td>Approximate</td><td>Secondary source (<a href="https://en.wikipedia.org/wiki/Willis_Tower">Wikipedia</a>)</td></tr>
+            <tr data-fact="floor-height" data-class="approximate" data-value="12.5"><th scope="row">Typical floor-to-floor</th><td>about 12.5 ft</td><td>Approximate</td><td>Derived: 1,354 ft ÷ 108 floors (an average, not a stated figure)</td></tr>
+            <tr data-fact="antenna-each" data-class="pending"><th scope="row">Individual antenna heights</th><td></td><td>Pending verification</td><td>Not stated by any source checked</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tech-note">Foundation, basement, and freight-tunnel research, with sources: <a href="https://github.com/jstephens-create/portfolio2.0/blob/main/specs/001-portfolio-experience/research.md">research notes</a>.</p>
+    </details>
+    <div class="command-line" id="entry" hidden>
+      <form class="prompt">
+        <label for="command">Command line</label>
+        <div class="prompt-line">
+          <span class="prompt-mark" aria-hidden="true">&gt;</span>
+          <input id="command" name="command" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="go" placeholder="help">
+          <button type="submit">Enter</button>
+        </div>
+        <p class="prompt-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </aside>
+  </div>
 
   <footer class="site-footer">
     <p>Jordan Stephens · i.c.stars C60 · Willis Tower figures are labeled verified, approximate, or interpretation; footprint data © OpenStreetMap contributors.</p>

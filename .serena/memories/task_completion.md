@@ -1,0 +1,4 @@
+# Completion and validation
+- When validation is requested, run `node --test "tests/*.test.js"` from repository root. Tests cover command parsing, anchors and resume links, tower geometry and motion, and audit rules.
+- For release work, follow `specs/001-portfolio-experience/quickstart.md`: check `?audit=release` for zero fail rows; verify links and facts; manually check keyboard-only navigation, reduced motion, no-JavaScript fallback, mobile widths, deep links, and print behavior. Use a local HTTP server, not `file://`.
+- No configured build, package installation, linter, formatter, or type-check command.

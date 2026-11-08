@@ -13,4 +13,7 @@ constitution amendment.
 
 - Use the Spec Kit skills in `.claude/skills/speckit-*` for the
   constitution → specify → clarify → plan → tasks → implement sequence.
-- Never commit `.claude/settings.local.json` or `.serena/`.
+- Never commit `.claude/settings.local.json`, `.serena/cache/`, or `.serena/project.local.yml`.
+  `.serena/project.yml` and `.serena/memories/` are shared project configuration.
+- `.claude/settings.json` denies reads of secrets and environment files; Git ignore rules do not
+  stop an assistant from reading a file.

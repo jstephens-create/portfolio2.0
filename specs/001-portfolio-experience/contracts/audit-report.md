@@ -21,7 +21,6 @@ in that case, so visitors never download it.
 | Images | Every `<img>` has `alt` (empty only if decorative) | FR-010 |
 | Facts | `verified` has a source; `pending` has no value | FR-022, SC-007 |
 | Forbidden contact data | No phone-number pattern in page text | FR-001 |
-| Cutaway levels | Each level's `href` matches an existing section | FR-027 |
 
 Each row reports `pass`, `fail`, or `warn` (warn = acceptable in v1, fails at final release) with
 the offending elements listed.

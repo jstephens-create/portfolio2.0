@@ -1,6 +1,8 @@
 # Contract: Entry Commands
 
-The command prompt (Story 3, FR-013 to FR-018) is the site's only text interface.
+The command line (Story 3, FR-013 to FR-018) is an optional, secondary feature in the Willis
+Tower panel (constitution v2.0.0). It is hidden until `js/command.js` runs, and the section nav
+reaches every destination without it.
 
 ## Input rules
 
@@ -16,24 +18,18 @@ The command prompt (Story 3, FR-013 to FR-018) is the site's only text interface
 
 | Command | Aliases | Destination | Response text (announced, FR-018) |
 |---|---|---|---|
-| `begin` | `start`, `enter` | GIS stage (`#gis`) | "Opening Willis Tower." |
 | `identity` | `about`, `whoami` | `#identity` | "Opening Identity." |
+| `technology` | `tech`, `skills` | `#technology` | "Opening Technology." |
 | `leadership` | — | `#leadership` | "Opening Leadership." |
-| `business` | — | `#business` | "Opening Business." |
-| `technology` | `tech` | `#technology` | "Opening Technology." |
+| `business` | — | `#business` (inside Leadership) | "Opening Business." |
 | `career` | `career planning` | `#career` | "Opening Career Planning." |
-| `resume` | `cv` | Opens resume PDF in new tab | "Opening resume in a new tab." |
+| `resume` | `cv` | Opens `assets/resume/Jordan_Stephens_Resume.pdf` in a new tab; says "The resume link is pending." if no linked PDF exists | "Opening resume in a new tab." |
 | `contact` | `email` | `#contact` | "Opening Contact." |
+| `tower` | `willis`, `model` | Willis Tower panel (`#gis`) | "Opening Willis Tower." |
 | `help` | `?`, `ls` | Stays | Lists every command name |
 
-Unknown or empty input → "Unknown command. Try: begin, identity, leadership, business,
-technology, career, resume, contact."
-
-## Suggestions
-
-Every command except `help` is also rendered as a visible button or link under the prompt
-(FR-016). Without scripts, the suggestions are plain links to the same destinations, so the entry
-stage degrades to navigation.
+Unknown or empty input → "Unknown command. Try: identity, technology, leadership, business,
+career, resume, contact, tower."
 
 ## Navigation behavior
 

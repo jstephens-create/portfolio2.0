@@ -11,16 +11,18 @@ published.
 | Fragment | Element | Heading |
 |---|---|---|
 | `#main` | `<main>` | — (skip-link target) |
-| `#profile` | profile block in `<header>` | `h1` name (target of the `resume` suggestion) |
-| `#entry` | `<section>` | visually hidden `h2` "Entry" |
-| `#gis` | `<section>` | `h2` Willis Tower |
-| `#descent` | `<section>` | `h2` Beneath the Loop |
-| `#identity` | `<section data-section data-minimum="0">` | `h2` Identity |
+| `#identity` | `<section data-section data-minimum="0">` | `h1` name (identity hero) |
+| `#profile` | hero block inside `#identity` | name, role, resume and profile links |
+| `#resume` | `<section data-section data-minimum="0">` | `h2` Resume (one link to the PDF) |
 | `#leadership` | `<section data-section data-minimum="5">` | `h2` Leadership |
-| `#business` | `<section data-section data-minimum="4">` | `h2` Business |
+| `#business` | `<section data-section data-minimum="4">` nested in `#leadership` | `h3` Business |
 | `#technology` | `<section data-section data-minimum="5">` | `h2` Technology |
 | `#career` | `<section data-section data-minimum="4">` | `h2` Career Planning |
 | `#contact` | `<section data-section data-minimum="0">` | `h2` Contact |
+| `#gis` | `<aside>` beside `<main>` (right quarter on desktop) | `h2` Willis Tower |
+| `#entry` | optional command line inside `#gis`, `hidden` until scripts run | label "Command line" |
+
+`#descent` was removed with the underground descent (constitution v2.0.0, 2026-11-08).
 
 ## Profile links
 
@@ -56,19 +58,9 @@ A `pending` profile entry is never an `<a>` (FR-005).
 ```
 
 Columns: label, value with unit, classification in words, source link. Rows used in drawings also carry `data-value` with the number in feet or floors (e.g. `data-value="1451"`); pending rows carry none. `data-class` ∈
-`verified`, `approximate`, `interpretation`, `pending`. The GIS stage and cutaway read values from
-this table; they never hard-code figures.
-
-## Cutaway levels
-
-```html
-<a class="level" href="#leadership" data-level="leadership"><text>Leadership · Foundation</text></a>
-```
-
-Exactly one `data-level` per top-level section: `identity`, `leadership`, `business`,
-`technology`, `career`, `contact` (six levels, in that order from street level to bedrock).
-Wellness was removed from the public portfolio at the author's direction (2026-11-01); see the
-pending constitution amendment.
+`verified`, `approximate`, `interpretation`, `pending`. The GIS stage reads values from this table;
+it never hard-codes figures. The table sits in the collapsed "Technical data and sources" panel.
+Underground and foundation figures live in [research.md](../research.md).
 
 ## Requirement keys
 

@@ -2,7 +2,6 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { wrapOffset } from '../js/nav.js';
 import { stackLabels } from '../js/gis/render.js';
-import { nearestLevel } from '../js/descent.js';
 import { stepAzimuth, project } from '../js/gis/geometry.js';
 
 test('ticker offset wraps within one copy in both directions', () => {
@@ -46,10 +45,4 @@ test('labels are stacked without overlap, in order, inside the stage', () => {
   for (let i = 1; i < sorted.length; i++) assert.ok(sorted[i].top >= sorted[i - 1].top + sorted[i - 1].h, 'no overlap');
   assert.ok(tops[1] < tops[0] && tops[0] < tops[2], 'keeps vertical order');
   assert.ok(Math.min(...tops) >= 8 && Math.max(...tops.map((t, i) => t + boxes[i].h)) <= 1000, 'inside bounds');
-});
-
-test('nearest level is the one closest to the viewport middle', () => {
-  assert.equal(nearestLevel([100, 300, 500], 320), 1);
-  assert.equal(nearestLevel([100, 300, 500], -50), 0);
-  assert.equal(nearestLevel([], 10), -1);
 });

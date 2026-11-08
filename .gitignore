@@ -1,6 +1,31 @@
-.serena/
-01_inspiration/Xbox.0.mov
+# Serena: project.yml and memories/ are shared; caches and local overrides are not
+.serena/cache/
+.serena/project.local.yml
+.serena/*.bak
+
+# Claude Code: shared settings.json and skills are versioned; personal settings are not
 .claude/settings.local.json
+
+# Large local media (source references stay local)
+01_inspiration/Xbox.0.mov
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Logs, caches, and generated test or build output
+*.log
+logs/
+.cache/
+node_modules/
+coverage/
+test-results/
+dist/
+build/
 
 # OS and editor files
 .DS_Store

@@ -1,3 +1,19 @@
+<!--
+Sync Impact Report
+- Version: 1.0.0 → 2.0.0 (MAJOR: Principle II redefined; one required experience element removed)
+- Modified principles:
+  - II. Creative Direction Integrity: identity-first homepage; Willis Tower wireframe becomes a
+    supporting instrument; command entry becomes optional; underground descent retired at the
+    author's direction (2026-11-08).
+  - III. Content Before Spectacle: bypass rule now covers any command line or immersive stage.
+  - VIII. Modular, Maintainable Code: module list no longer names the descent.
+- Added sections: none. Removed sections: none.
+- Templates: .specify/templates/* reviewed, no principle names to update.
+- Follow-up: AGENTS.md and project README updated to match. Business now sits as a visible
+  subsection of Leadership (still present per Principle I). Open item carried over: Wellness and
+  the RFP item were removed at the author's direction on 2026-11-01; that Principle I conflict
+  still awaits an author decision.
+-->
 # portfolio2.0 Constitution
 
 ## Core Principles
@@ -21,19 +37,25 @@ a required item fails its purpose.
 
 ### II. Creative Direction Integrity
 
-The portfolio's identity is a three-part experience that MUST be preserved:
+The author's professional identity is the product; the technical visualization supports it.
+The following MUST be preserved:
 
-1. A command-style entry that introduces the visitor to the portfolio.
-2. An interactive Chicago architectural GIS wireframe (Willis Tower as the primary subject).
-3. A scroll-driven transition descending into an industrial underground environment, where
-   the portfolio sections live.
+1. An identity-first homepage: the author's name, role, background, resume actions, LinkedIn,
+   GitHub, and contact appear in the first view, without any interaction.
+2. An interactive Chicago architectural GIS wireframe (Willis Tower as the primary subject),
+   presented as a supporting technical instrument beside the portfolio content, never in front
+   of it.
 
+- A command-style line MAY remain as a secondary feature; it MUST NOT be required to reach
+  content.
+- The underground descent ("Beneath the Loop") was retired at the author's direction on
+  2026-11-08 and MUST NOT be reintroduced without the author's approval.
 - These elements MAY be simplified, staged, or delivered progressively, but MUST NOT be
   replaced, removed, or substituted with a generic template without the author's approval.
 - Reference material MUST be interpreted for its underlying principles, not reproduced.
 
-Rationale: the experience expresses the author's voice and is part of what the portfolio
-demonstrates.
+Rationale: visitors must understand who the author is in seconds; the wireframe demonstrates
+technical ability without standing between the visitor and the portfolio.
 
 ### III. Content Before Spectacle
 
@@ -42,7 +64,7 @@ animation, 3D scene, or command-style input.
 
 - All required content MUST exist in the page document as readable, semantic content, and MUST
   remain usable if scripts, WebGL, or animation fail or are disabled.
-- The visitor MUST be able to skip or bypass the command entry and the scroll descent.
+- The visitor MUST be able to skip or bypass any command line or immersive stage.
 - Navigation MUST provide direct access to every section.
 - Motion MUST respect the user's reduced-motion preference.
 - The site MUST be operable by keyboard, use a correct heading hierarchy, provide text
@@ -109,7 +131,7 @@ and the code understandable to its author.
 
 - Content, presentation, and behavior MUST be kept separable so portfolio writing can be edited
   without touching rendering or animation code.
-- Each experience module (command entry, wireframe, descent, portfolio sections) MUST be
+- Each experience module (command line, wireframe, navigation, audit, portfolio sections) MUST be
   independent enough that a failure in one does not break the others or hide content.
 - Code MUST use clear names, follow one consistent convention per language, and contain no dead
   or speculative code.
@@ -175,4 +197,4 @@ conflict MUST be resolved in the relevant specification or by amendment.
   alternative that was rejected and why.
 - **Priority**: when principles conflict, lower-numbered principles take precedence.
 
-**Version**: 1.0.0 | **Ratified**: 2026-10-22 | **Last Amended**: 2026-10-22
+**Version**: 2.0.0 | **Ratified**: 2026-10-22 | **Last Amended**: 2026-11-08

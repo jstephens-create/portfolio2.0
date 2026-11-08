@@ -2,23 +2,22 @@
 
 **Live site:** <https://jstephens-create.github.io/portfolio2.0/>
 
-My i.c.stars C60 digital portfolio: Identity, Leadership, Business, Technology, and Career
-Planning, presented as a descent from a Chicago skyline into the ground beneath it.
+My i.c.stars C60 digital portfolio. Who I am comes first; a Willis Tower wireframe beside it
+shows the technical side of my work.
 
 ## The experience
 
-1. **Entry**: a command prompt (`begin`, `leadership`, `resume`, `help`, …) beside my name and
-   professional links.
-2. **Willis Tower**: a rotatable wireframe of the bundled-tube structure, drawn only from a facts
-   table where every figure is labeled verified, approximate, or interpretation, with its source.
-3. **Underground descent**: scrolling moves the view below the street into a drafted cutaway:
-   Lower Wacker, the Loop Pedway (shown as context; no known connection to the tower), the freight
-   tunnel level, the basement, caissons, and limestone bedrock.
-4. **Portfolio sections**: each cutaway level opens one section of the portfolio.
-5. **Direct access**: name, resume, LinkedIn, GitHub, and contact are in the first view, and the
-   navigation reaches every section without the immersive stages.
+1. **Identity**: my name, role, background, resume, LinkedIn, GitHub, and email in the first view.
+2. **Sections**: 01 Identity, 02 Resume (opens my resume PDF), 03 Technology, 04 Leadership (with
+   Business), 05 Career, 06 Contact.
+3. **Willis Tower instrument**: on desktop the right quarter of the page holds a slowly rotating
+   wireframe of the bundled-tube structure, with rotate, zoom, pause, and reset controls. Every
+   figure is labeled verified, approximate, or interpretation; the full data table and sources sit
+   in a collapsed "Technical data and sources" panel. Phones stack it after the portfolio.
+4. **Command line** (optional): type `help` in the tower panel for keyboard shortcuts to sections.
 
-Everything works with JavaScript off and with reduced motion; the stages are enhancements.
+Everything works with JavaScript off and with reduced motion; the tower and command line are
+enhancements.
 
 ## Local development
 
@@ -45,21 +44,20 @@ node --test "tests/*.test.js"
 ## Technologies
 
 HTML, CSS, and JavaScript modules, with no framework, build step, or runtime dependency. Canvas
-2D for the tower, inline SVG for the cutaway. Tests use Node's built-in test runner. Hosted on
+2D for the tower, with a static SVG drawing as its fallback. Tests use Node's built-in test runner. Hosted on
 GitHub Pages.
 
 ## Project structure
 
 ```text
-index.html            All content, facts tables, and the cutaway drawing
-css/site.css          Visual system, layout, reduced-motion and print styles
+index.html            All content and the Willis Tower facts table
+css/site.css          Visual system, 75/25 layout, reduced-motion and print styles
 js/main.js            Loads each stage in isolation
-js/command.js         Entry prompt
+js/command.js         Optional command line in the tower panel
 js/gis/               Tower geometry (from the facts table) and Canvas renderer
-js/descent.js         Scroll-driven descent
 js/nav.js             Section ticker and scroll spy
 js/audit.js           Content audit (?audit)
-assets/               Resume, images, static tower drawing
+assets/               Headshot, resume PDF, static tower drawing
 tests/                Unit tests
 specs/                Spec Kit specification, plan, research, and tasks
 01_inspiration/, Architectual-gis-wireframe/   Design references (not published as site assets)

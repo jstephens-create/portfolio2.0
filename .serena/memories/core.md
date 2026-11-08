@@ -1,0 +1,11 @@
+# Project map
+- Static portfolio; repository root is this nested `portfolio2.0/` directory.
+- `index.html` is the canonical semantic content, portfolio facts, and section metadata source. It remains useful without JavaScript.
+- `css/site.css` owns styling, responsive behavior, reduced motion, and print.
+- `js/main.js` is the browser-module entry point. It loads the command line and nav immediately, loads the GIS stage when the tower panel approaches, and loads the audit module for `?audit`. Each stage is isolated so a failure does not hide content or break other stages.
+- Stage modules: `js/command.js`; `js/nav.js` (ticker + scroll spy; sole owner of `aria-current` on nav links); `js/gis/geometry.js` and `js/gis/render.js`; `js/audit.js`.
+- Wellness and the RFP item were removed at the author's direction (2026-11-01). This conflicts with constitution Principle I; an amendment is pending author approval. Business is intentionally 3 of 4, so `?audit` shows one coverage FAIL. Static semantic content and fallback drawings remain available without these enhancements.
+- Keep facts source-traceable and classified as verified, approximate, interpretation, or pending. Align audit changes with `js/audit.js`, `specs/001-portfolio-experience/data-model.md`, and related contracts.
+- Identity-first layout (constitution v2.0.0, 2026-11-08): identity hero first, 75/25 desktop grid with the Willis Tower wireframe as a right-hand instrument, optional command line in that panel, underground descent retired. Business is nested in Leadership. Preserve the required assignment sections, keyboard access, focus, reduced-motion behavior, responsive layouts, and text alternatives. Do not invent author details or experiences; incomplete content stays pending.
+- `01_inspiration/` and `Architectual-gis-wireframe/` are source references, not published assets; do not move, rename, overwrite, or delete them without authorization.
+- Further stack, workflow, style, and completion details: `mem:tech_stack`, `mem:suggested_commands`, `mem:conventions`, `mem:task_completion`.

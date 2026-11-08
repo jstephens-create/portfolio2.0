@@ -29,13 +29,12 @@ never as a link (FR-005). Phone number and street address are not fields and MUS
 
 | Field | Rule |
 |---|---|
-| id | One of `identity`, `leadership`, `business`, `technology`, `career`, `contact` |
+| id | One of `identity`, `resume`, `technology`, `leadership`, `business` (nested in Leadership), `career`, `contact` |
 | heading | Visible `h2` |
 | minimum | Leadership 5, Business 4, Technology 5, Career 4; others 0 |
 | items | Ordered Portfolio Items |
 
-The section `id` doubles as its shareable link fragment (FR-003), its command name, and its
-cutaway level target.
+The section `id` doubles as its shareable link fragment (FR-003) and its command name.
 
 ## Portfolio Item
 
@@ -76,7 +75,7 @@ by the content audit (see [contracts/audit-report.md](contracts/audit-report.md)
 
 ## Architectural Fact
 
-One row of the technical data table shared by the GIS stage and the cutaway (FR-021, FR-022,
+One row of the technical data table read by the GIS stage (FR-021, FR-022,
 FR-034). The table is the text equivalent and the static fallback's legend.
 
 | Field | Rule |
@@ -90,17 +89,6 @@ FR-034). The table is the text equivalent and the static fallback's legend.
 
 Validation: a `verified` fact without a source, or a `pending` fact with a value, fails the audit
 (SC-007).
-
-## Cutaway Level
-
-| Field | Rule |
-|---|---|
-| section | Target top-level Portfolio Section `id`; seven levels (FR-027) |
-| label | Visible text naming the section and the layer it sits in |
-| layer | Layer depicted: street and Lower Wacker, basement, Pedway (Loop context only), freight-tunnel level, caissons, bedrock; or `interpretation` |
-| facts | Optional Architectural Fact keys shown on the level |
-
-Spacing between levels is interpretation and is labeled so (spec Assumptions).
 
 ## Command
 

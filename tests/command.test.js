@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { parseCommand } from '../js/command.js';
 
-const UNKNOWN = 'Unknown command. Try: begin, identity, leadership, business, technology, career, resume, contact.';
+const UNKNOWN = 'Unknown command. Try: identity, technology, leadership, business, career, resume, contact, tower.';
 
 test('normalizes case, whitespace, and prompt prefixes', () => {
   for (const input of ['leadership', '  LEADERSHIP ', '/leadership', '> Leadership', '$ leadership']) {
@@ -12,13 +12,13 @@ test('normalizes case, whitespace, and prompt prefixes', () => {
 
 test('every name and alias reaches its destination with its response', () => {
   const cases = [
-    [['begin', 'start', 'enter'], '#gis', 'Opening Willis Tower.'],
     [['identity', 'about', 'whoami'], '#identity', 'Opening Identity.'],
+    [['technology', 'tech', 'skills'], '#technology', 'Opening Technology.'],
     [['leadership'], '#leadership', 'Opening Leadership.'],
     [['business'], '#business', 'Opening Business.'],
-    [['technology', 'tech'], '#technology', 'Opening Technology.'],
     [['career', 'career planning'], '#career', 'Opening Career Planning.'],
     [['contact', 'email'], '#contact', 'Opening Contact.'],
+    [['tower', 'willis', 'model'], '#gis', 'Opening Willis Tower.'],
   ];
   for (const [inputs, target, message] of cases) {
     for (const input of inputs) {
@@ -37,14 +37,14 @@ test('help lists every command name', () => {
   for (const input of ['help', '?', 'ls']) {
     const { action, message } = parseCommand(input);
     assert.equal(action, 'help');
-    for (const name of ['begin', 'identity', 'leadership', 'business', 'technology', 'career', 'resume', 'contact', 'help']) {
+    for (const name of ['identity', 'technology', 'leadership', 'business', 'career', 'resume', 'contact', 'tower', 'help']) {
       assert.match(message, new RegExp(`\\b${name}\\b`), name);
     }
   }
 });
 
-test('removed sections are no longer commands', () => {
-  for (const input of ['wellness', 'rfp']) assert.equal(parseCommand(input).action, 'help', input);
+test('removed sections and stages are no longer commands', () => {
+  for (const input of ['wellness', 'rfp', 'begin', 'descent', 'experience']) assert.equal(parseCommand(input).action, 'help', input);
 });
 
 test('empty and unknown input return the unknown-command help', () => {

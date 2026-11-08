@@ -22,12 +22,11 @@ function baseModel(status = 'pending') {
       { key: 'height-architectural', cls: 'verified', value: '442.1 m / 1,451 ft', source: 'https://www.skyscrapercenter.com/building/willis-tower/169' },
       { key: 'antenna-each', cls: 'pending', value: '', source: null },
     ],
-    levels: [{ href: '#identity' }, { href: '#contact' }],
-    sectionIds: ['entry', 'gis', 'descent', 'identity', 'leadership', 'business', 'technology', 'career', 'contact'],
     text: '233 South Wacker Drive, Chicago 60606 · 442.1 m / 1,451 ft · 41.87874° N, 87.63596° W · 1899–1914',
   };
 }
 
+const leadership = (model) => model.sections.find((s) => s.id === 'leadership');
 const row = (results, check) => results.find((r) => r.check === check);
 const statusOf = (model, check, mode) => row(runAudit(model, { mode }), check).status;
 
@@ -39,27 +38,27 @@ test('the base model passes in v1 with pending content as warn', () => {
 
 test('section coverage counts only non-bonus items', () => {
   const m = baseModel();
-  m.sections[1].items = [...items('leadership', ['team-week', 'gifts-project', 'community-role', 'tea-host']), item('leadership.bonus')];
+  leadership(m).items = [...items('leadership', ['team-week', 'gifts-project', 'community-role', 'tea-host']), item('leadership.bonus')];
   assert.equal(statusOf(m, 'Section coverage'), 'fail');
 });
 
 test('unknown requirement key fails', () => {
   const m = baseModel();
-  m.sections[1].items.push(item('leadership.made-up'));
+  leadership(m).items.push(item('leadership.made-up'));
   assert.equal(statusOf(m, 'Requirement labels'), 'fail');
 });
 
 test('a requirement key used twice fails', () => {
   const m = baseModel();
-  m.sections[1].items.push(item('leadership.team-week'));
+  leadership(m).items.push(item('leadership.team-week'));
   assert.equal(statusOf(m, 'Duplicate options'), 'fail');
 });
 
 test('external item without a source fails; with a source passes', () => {
   const m = baseModel();
-  m.sections[1].items[0] = item('leadership.team-week', 'external');
+  leadership(m).items[0] = item('leadership.team-week', 'external');
   assert.equal(statusOf(m, 'External sources'), 'fail');
-  m.sections[1].items[0] = item('leadership.team-week', 'external', 'Google Drive');
+  leadership(m).items[0] = item('leadership.team-week', 'external', 'Google Drive');
   assert.equal(statusOf(m, 'External sources'), 'pass');
 });
 
@@ -94,12 +93,6 @@ test('a phone number fails; building address, heights, and coordinates do not', 
     m.text += ` Call ${phone}`;
     assert.equal(statusOf(m, 'Forbidden contact data'), 'fail', phone);
   }
-});
-
-test('cutaway level pointing at a missing section fails', () => {
-  const m = baseModel();
-  m.levels.push({ href: '#basement' });
-  assert.equal(statusOf(m, 'Cutaway levels'), 'fail');
 });
 
 test('release mode fails pending content and counts only final items', () => {

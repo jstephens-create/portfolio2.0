@@ -38,7 +38,6 @@ export function runAudit(model, { mode = 'v1' } = {}) {
     result('Images', model.images.filter((img) => img.alt === null).map((img) => img.src)),
     result('Facts', model.facts.filter((f) => (f.cls === 'verified' && !f.source) || (f.cls === 'pending' && f.value)).map((f) => f.key)),
     result('Forbidden contact data', PHONE.test(model.text) ? [model.text.match(PHONE)[0]] : []),
-    result('Cutaway levels', model.levels.filter((l) => !model.sectionIds.includes(l.href.slice(1))).map((l) => l.href)),
   ];
 }
 
@@ -60,8 +59,6 @@ export function collectModel(doc) {
       value: tr.dataset.value ?? tr.cells[1]?.textContent.trim(),
       source: tr.querySelector('a[href]')?.href ?? null,
     })),
-    levels: [...doc.querySelectorAll('[data-level]')].map((a) => ({ href: a.getAttribute('href') })),
-    sectionIds: [...doc.querySelectorAll('main [id]')].map((el) => el.id),
     text: doc.body.textContent,
   };
 }

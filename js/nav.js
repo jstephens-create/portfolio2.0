@@ -7,9 +7,9 @@ const MAX_STEP_MS = 100; // a long frame gap (background tab, jank) never become
 // Keep the drift inside one copy of the list so the loop never visibly jumps.
 export const wrapOffset = (offset, period) => (period > 0 ? ((offset % period) + period) % period : 0);
 
-// One place marks the current section, in the nav and in the cutaway levels.
+// One place marks the current section in the nav.
 function markCurrent(id) {
-  for (const link of document.querySelectorAll('.site-nav a[href^="#"], .cutaway .level')) {
+  for (const link of document.querySelectorAll('.site-nav a[href^="#"]')) {
     if (link.getAttribute('href') === `#${id}`) link.setAttribute('aria-current', 'location');
     else link.removeAttribute('aria-current');
   }
@@ -20,7 +20,7 @@ export function init(nav) {
   const originals = [...list.children];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
 
-  // The section crossing the middle of the viewport is current; stages above Identity clear it.
+  // The section crossing the middle of the viewport is current.
   const spy = new IntersectionObserver((entries) => {
     for (const entry of entries) if (entry.isIntersecting) markCurrent(entry.target.id);
   }, { rootMargin: '-45% 0px -54% 0px' });
