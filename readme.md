@@ -33,18 +33,12 @@ block script modules on `file://`.
 
 ## Checks
 
-```bash
-node --test "tests/*.test.js"
-```
-
-- `?audit` in the URL shows the content coverage report; `?audit=release` is the final gate.
-- Manual scenarios, performance budgets, and the link check are in
-  [specs/001-portfolio-experience/quickstart.md](specs/001-portfolio-experience/quickstart.md).
+`?audit` in the URL shows the content coverage report; `?audit=release` is the final gate.
 
 ## Technologies
 
 HTML, CSS, and JavaScript modules, with no framework, build step, or runtime dependency. Canvas
-2D for the tower, with a static SVG drawing as its fallback. Tests use Node's built-in test runner. Hosted on
+2D for the tower, with a static SVG drawing as its fallback. Hosted on
 GitHub Pages.
 
 ## Project structure
@@ -58,9 +52,6 @@ js/gis/               Tower geometry (from the facts table) and Canvas renderer
 js/nav.js             Section ticker and scroll spy
 js/audit.js           Content audit (?audit)
 assets/               Headshot, resume PDF, static tower drawing
-tests/                Unit tests
-specs/                Spec Kit specification, plan, research, and tasks
-01_inspiration/, Architectual-gis-wireframe/   Design references (not published as site assets)
 ```
 
 ## Live site
