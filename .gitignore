@@ -6,3 +6,61 @@
 !/css/
 !/js/
 !/assets/
+!/network/
+
+# Denylist: these rules come after the allowlist, so they still apply inside the published folders.
+
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+*.secret
+*secret*.json
+*credentials*
+*.token
+.npmrc
+.netrc
+
+# Private or draft material
+private/
+*.private.*
+_*
+*.bak
+*.old
+*.orig
+*.tmp
+
+# AI and tooling (never published)
+.claude/
+.serena/
+.specify/
+CLAUDE.md
+AGENTS.md
+
+# OS and editor junk
+desktop.ini
+Thumbs.db
+ehthumbs.db
+*.lnk
+.DS_Store
+._*
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependencies, builds and logs
+node_modules/
+*.log
+npm-debug.log*
+coverage/
+*.map
